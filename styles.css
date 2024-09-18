@@ -1,0 +1,9 @@
+body {
+  background-color: #161515;
+  color: #ffffff;
+}
+
+header {
+  background: rgb(47, 44, 44);
+  background: linear-gradient(0deg, rgb(47, 44, 44) 8%, rgb(56, 56, 71) 25%, rgb(190, 190, 190) 100%);
+}/*# sourceMappingURL=styles.css.map */

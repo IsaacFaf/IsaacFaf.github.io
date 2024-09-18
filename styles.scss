@@ -1,0 +1,13 @@
+@use "sass:color";
+
+
+$testColor: #ffffff;
+$color: #161515;
+body{
+    background-color: $color;
+    color: $testColor;
+}
+header{
+    background: rgb(47,44,44);
+    background: linear-gradient(0deg, rgba(47,44,44,1) 8%, rgb(56, 56, 71) 25%, rgba(190,190,190,1) 100%);
+}
