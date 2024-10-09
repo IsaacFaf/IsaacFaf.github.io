@@ -1,20 +1,118 @@
 @use "sass:color";
 
+$nav: #474556;
+$body: #A1A1A1;
+$bgProjet: #221248;
+$titleProjet: #3A2380;
+$footer: #56586C;
 
-$testColor: #ffffff;
-$color: #161515;
-body{
-    background-color: $color;
-    color: $testColor;
-}
 header{
-    background: rgb(47,44,44);
-    background: linear-gradient(0deg, rgba(47,44,44,1) 8%, rgb(56, 56, 71) 25%, rgba(190,190,190,1) 100%);
+    background-color: $nav;
+    
+    .navbar-brand{
+        color: white;
+    }
+    .navbar-nav{ 
+        a{
+            color: white;
+        }
+    }}
+
+.presente{
+    width: 100%;
+    height: auto;
+    video{
+        background-color: black;
+    }
+    background-color: grey;
 }
-.test {
-    background: url('5046361.jpg') 3px 5px no-repeat;
-    background-size: contain; /* ou 'cover' selon vos besoins */
-    width: 600px;
-    height: 200px;
-    image-rendering: auto;
+
+
+
+
+.apercu{
+    padding-top: 3vw;
+    background-color: $bgProjet;
+    .accueil-presentation {
+        position: relative;
+        overflow: hidden; /* Pour cacher les vidéos en dehors du conteneur */
+    }
+    .title{
+        color: white;
+        background-color: $titleProjet;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+        box-shadow: 2px 2.5px 5px 2px rgb(0 0 0 / .8);
+        padding-top: 3px;
+        padding-bottom: 5px;
+        
+    }
+
+    .video-container {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .presentation {
+        min-width: 100%;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0);//RENDRE LE FOND INVISIBLE :)
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 10;
+    }
+
+    .left-arrow {
+        left: 10px;
+    }
+
+    .right-arrow {
+        right: 10px;
+}}
+section.carroussel{
+    background-color: $bgProjet;
+    width: 100%;
+    padding-top: 5px;
+    .title{
+        color: white;
+        background-color: $titleProjet;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+        box-shadow: 2px 2.5px 5px 2px rgb(0 0 0 / .8);
+        padding-top: 3px;
+        padding-bottom: 5px;
+        border: 1px solid black 100%;
+        
+    }
+    .defilement{
+        
+        padding-top: 15px;
+        display: grid;
+        gap: 15px;
+        justify-content: center;
+        canvas{
+            background-color: black;
+            opacity: 24.8%;
+        }
+    }
+
+}
+
+footer{
+    background-color: $footer;
+    section{
+        .social{
+            background-color: black;
+            opacity: 10%;
+        }
+    }
 }

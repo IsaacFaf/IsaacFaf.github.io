@@ -1,17 +1,97 @@
-body {
-  background-color: #161515;
-  color: #ffffff;
-}
-
+@charset "UTF-8";
 header {
-  background: rgb(47, 44, 44);
-  background: linear-gradient(0deg, rgb(47, 44, 44) 8%, rgb(56, 56, 71) 25%, rgb(190, 190, 190) 100%);
+  background-color: #474556;
+}
+header .navbar-brand {
+  color: white;
+}
+header .navbar-nav a {
+  color: white;
 }
 
-.test {
-  background: url("5046361.jpg") 3px 5px no-repeat;
-  background-size: contain; /* ou 'cover' selon vos besoins */
-  width: 600px;
-  height: 200px;
-  image-rendering: auto;
+.presente {
+  width: 100%;
+  height: auto;
+  background-color: grey;
+}
+.presente video {
+  background-color: black;
+}
+
+.apercu {
+  padding-top: 3vw;
+  background-color: #221248;
+}
+.apercu .accueil-presentation {
+  position: relative;
+  overflow: hidden; /* Pour cacher les vidéos en dehors du conteneur */
+}
+.apercu .title {
+  color: white;
+  background-color: #3A2380;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  box-shadow: 2px 2.5px 5px 2px rgba(0, 0, 0, 0.8);
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+.apercu .video-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.apercu .presentation {
+  min-width: 100%;
+}
+.apercu .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+.apercu .left-arrow {
+  left: 10px;
+}
+.apercu .right-arrow {
+  right: 10px;
+}
+
+section.carroussel {
+  background-color: #221248;
+  width: 100%;
+  padding-top: 5px;
+}
+section.carroussel .title {
+  color: white;
+  background-color: #3A2380;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  box-shadow: 2px 2.5px 5px 2px rgba(0, 0, 0, 0.8);
+  padding-top: 3px;
+  padding-bottom: 5px;
+  border: 1px solid black 100%;
+}
+section.carroussel .defilement {
+  padding-top: 15px;
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+}
+section.carroussel .defilement canvas {
+  background-color: black;
+  opacity: 24.8%;
+}
+
+footer {
+  background-color: #56586C;
+}
+footer section .social {
+  background-color: black;
+  opacity: 10%;
 }/*# sourceMappingURL=styles.css.map */
