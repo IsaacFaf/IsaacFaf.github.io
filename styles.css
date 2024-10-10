@@ -91,7 +91,16 @@ section.carroussel .defilement canvas {
 footer {
   background-color: #56586C;
 }
+footer section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
 footer section .social {
   background-color: black;
   opacity: 10%;
+}
+footer section .pages a {
+  color: white;
+  text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */

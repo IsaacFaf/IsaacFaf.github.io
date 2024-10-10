@@ -110,9 +110,21 @@ section.carroussel{
 footer{
     background-color: $footer;
     section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         .social{
             background-color: black;
             opacity: 10%;
         }
+        .pages{
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
     }
+}
+@for $i from 1 through 4{
+    
 }
