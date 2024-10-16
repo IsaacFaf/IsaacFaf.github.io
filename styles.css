@@ -82,6 +82,14 @@ section.carroussel .defilement {
   display: grid;
   gap: 15px;
   justify-content: center;
+  width: 100%;
+}
+section.carroussel .defilement video {
+  min-width: 75%;
+  min-height: 75%;
+  background-color: beige;
+  opacity: 24.8%;
+  width: 100%;
 }
 section.carroussel .defilement canvas {
   background-color: black;
@@ -101,7 +109,7 @@ footer section .social {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: black;
+  background-color: rgb(70, 68, 68);
   opacity: 80%;
   grid-column: 1/-1;
   width: 100%;
@@ -117,7 +125,7 @@ footer section .social svg:hover {
   width: 96px;
 }
 footer section .social:nth-child(1) {
-  background-color: black;
+  background-color: none;
   opacity: 80%;
   grid-column: 1/-1;
   width: 100%;
@@ -174,7 +182,7 @@ footer section .social {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: black;
+  background-color: rgb(70, 68, 68);
   opacity: 80%;
   grid-column: 1/-1;
   width: 100%;
@@ -190,7 +198,7 @@ footer section .social svg:hover {
   width: 96px;
 }
 footer section .social:nth-child(2) {
-  background-color: black;
+  background-color: none;
   opacity: 80%;
   grid-column: 1/-1;
   width: 100%;
@@ -247,7 +255,7 @@ footer section .social {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: black;
+  background-color: rgb(70, 68, 68);
   opacity: 80%;
   grid-column: 1/-1;
   width: 100%;
@@ -263,7 +271,7 @@ footer section .social svg:hover {
   width: 96px;
 }
 footer section .social:nth-child(3) {
-  background-color: black;
+  background-color: none;
   opacity: 80%;
   grid-column: 1/-1;
   width: 100%;
@@ -320,7 +328,7 @@ footer section .social {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: black;
+  background-color: rgb(70, 68, 68);
   opacity: 80%;
   grid-column: 1/-1;
   width: 100%;
@@ -336,7 +344,7 @@ footer section .social svg:hover {
   width: 96px;
 }
 footer section .social:nth-child(4) {
-  background-color: black;
+  background-color: none;
   opacity: 80%;
   grid-column: 1/-1;
   width: 100%;

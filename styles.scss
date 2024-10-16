@@ -99,6 +99,15 @@ section.carroussel{
         display: grid;
         gap: 15px;
         justify-content: center;
+        width: 100%;
+        video{
+            
+            min-width: 75%;
+            min-height: 75%;
+            background-color: beige;
+            opacity: 24.8%;
+            width: 100%;
+        }
         canvas{
             background-color: black;
             opacity: 24.8%;
@@ -120,7 +129,7 @@ footer{
             display: flex; // Pour aligner les enfants horizontalement
             align-items: center; // Centre verticalement
             justify-content: space-evenly; // Centre horizontalement
-            background-color: black;
+            background-color: rgb(70, 68, 68);
             opacity: 80%;
             grid-column: 1 / -1;
             width: 100%;
@@ -141,7 +150,7 @@ footer{
             }
         }
         .social:nth-child(#{$i}){
-            background-color: black;
+            background-color: none;
             opacity: 80%;
             grid-column: 1/ -1;;
             width: 100%;
