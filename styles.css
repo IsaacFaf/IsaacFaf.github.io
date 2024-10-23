@@ -409,14 +409,11 @@ body {
   border: none;
   position: relative;
   background: #353535;
-  cursor: pointer;
-  transition: 0.3s;
   height: 750px;
+  width: 100%;
 }
-.moving-border-wrapper:hover {
-  background: #555555;
-}
-.moving-border-wrapper .moving-border-content {
+
+.moving-border-content {
   position: absolute;
   background: radial-gradient(circle, rgb(28, 28, 40) 25%, rgb(9, 9, 77) 100%);
   color: white;
@@ -428,34 +425,117 @@ body {
   height: calc(100% - 10px);
   top: 5px;
   left: 5px;
-  right: 5px;
-  bottom: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.moving-border-wrapper .moving-border-content img {
-  width: 90%;
+
+.animated-image {
+  width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: 25%;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
+  animation: float 6s ease-in-out infinite, opacity-change 10s ease-in-out infinite, color-change 8s ease-in-out infinite, glitch 2s infinite;
+  position: relative;
 }
-.moving-border-wrapper .moving-border-content h1 {
+
+/* Ondulation continue sur l'image */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Changement d'opacité lent sur l'image */
+@keyframes opacity-change {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+/* Variation de couleur */
+@keyframes color-change {
+  0% {
+    filter: hue-rotate(0deg) saturate(100%) contrast(100%);
+  }
+  25% {
+    filter: hue-rotate(45deg) saturate(150%) contrast(120%);
+  }
+  50% {
+    filter: hue-rotate(90deg) saturate(200%) contrast(130%);
+  }
+  75% {
+    filter: hue-rotate(180deg) saturate(250%) contrast(120%);
+  }
+  100% {
+    filter: hue-rotate(360deg) saturate(100%) contrast(100%);
+  }
+}
+/* Glitch effect */
+@keyframes glitch {
+  0%, 100% {
+    filter: none;
+    transform: none;
+  }
+  10% {
+    filter: contrast(200%) brightness(150%) saturate(200%);
+    transform: translate(-2px, -1px);
+  }
+  20% {
+    filter: blur(2px) hue-rotate(10deg);
+    transform: translate(2px, 1px);
+  }
+  30% {
+    filter: drop-shadow(2px 2px 5px red) contrast(150%);
+    transform: translate(-1px, -1px);
+  }
+  40% {
+    filter: brightness(120%);
+    transform: translate(1px, 0);
+  }
+  50% {
+    filter: blur(3px) hue-rotate(180deg);
+    transform: translate(-2px, 2px);
+  }
+}
+/* Effet de lumière pulsante sur le texte */
+.pulsating-text {
   margin-top: 20px;
+  font-size: 3rem;
+  animation: pulsate 3s ease-in-out infinite;
 }
-.moving-border-wrapper .moving-border-mover {
+
+/* Effet de lumière pulsante sur le texte */
+@keyframes pulsate {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgb(255, 255, 255), 0 0 40px rgba(255, 255, 255, 0.8);
+  }
+}
+/* Animation de la bordure lumineuse en arrière-plan */
+.moving-border-mover {
   position: absolute;
-  width: 140%;
-  height: 340%;
-  top: 50%;
-  left: 50%;
+  width: 120%;
+  height: 250%;
+  top: -80%;
+  left: -10%;
   transform: translate(-50%, -50%);
   animation: move 3s linear infinite;
 }
-.moving-border-wrapper .bg-1 {
+
+.bg-1 {
   background: conic-gradient(from 180deg at 50% 50%, #e92a67 0deg, #ff9710 112.5deg, rgba(255, 255, 255, 0) 228.75deg, rgba(42, 138, 246, 0) 360deg);
 }
 
