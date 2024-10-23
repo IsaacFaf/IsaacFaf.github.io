@@ -214,64 +214,12 @@ footer{
 
 
 
-//LOADER
-.loader {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: linear-gradient(#6d6bff, #30dbf1, #58eb48);
-    animation: animate 1s linear infinite;
+  body{
+    background-color: $bgProjet;
   }
-  
-  @keyframes animate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .loader span {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: linear-gradient(#6d6bff, #30dbf1, #58eb48);
-  }
-  
-  .loader span:nth-child(1){
-    filter: blur(5px);
-  }
-  
-  .loader span:nth-child(2){
-    filter: blur(10px);
-  }
-  
-  .loader span:nth-child(3){
-    filter: blur(25px);
-  }
-  
-  .loader span:nth-child(4){
-    filter: blur(50px);
-  }
-  
-  .loader:after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background: #240229;
-    border-radius: 50%;
-  }
-
 
   //TEST
   
-
   .moving-border-wrapper {
     overflow: hidden;
     border-radius: 10px;
@@ -282,58 +230,80 @@ footer{
     cursor: pointer;
     transition: 0.3s;
     height: 750px;
-    
-  &:hover {
-    background: #555555;
+  
+    &:hover {
+      background: #555555;
+    }
+  
+    .moving-border-content {
+      position: absolute;
+      background: radial-gradient(circle, rgba(28, 28, 40, 1) 25%, rgb(9, 9, 77) 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 30px;
+      font-weight: 700;
+      width: calc(100% - 10px); // 5px de chaque côté
+      height: calc(100% - 10px); // 5px en haut et en bas
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      img {
+        width: 90%; // L'image occupe tout l'espace disponible à l'intérieur du conteneur
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+        object-fit: cover; // S'assure que l'image s'ajuste bien au conteneur sans déborder
+      }
+  
+      h1 {
+        margin-top: 20px;
+      }
+    }
+  
+    .moving-border-mover {
+      position: absolute;
+      width: calc(100% * 1.4);
+      height: calc(100% * 3.4);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: move 3s linear infinite;
+    }
+  
+    .bg-1 {
+      background: conic-gradient(
+        from 180deg at 50% 50%,
+        #e92a67 0deg,
+        #ff9710 112.5deg,
+        #fff0 228.75deg,
+        rgba(42, 138, 246, 0) 360deg
+      );
+    }
   }
-  .moving-border-content {
-    position: relative;
-    background: #131313;
-    color: white;
-    display: inline-block;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 30px;
-    font-weight: 700;
-    width: 95vw;
-    height: 76vh;
-    margin-top:5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    
-  }
-  .moving-border-mover {
-    display: block;
-    position: absolute;
-    width: calc(100% * 1.4);
-    height: calc(100% * 3.4);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    animation: move 3s linear infinite;
-  }
-  .bg-1 {
-    background: conic-gradient(from 180deg at 50% 50%,#e92a67 0deg,#ff9710 112.5deg,#fff0 228.75deg,rgba(42,138,246,0) 360deg);
-  }}
-
+  
   @keyframes move {
     0% {
       transform: rotate(0deg);
     }
-    25%{
-        transform: rotate(-90deg);
+    25% {
+      transform: rotate(-90deg);
     }
-    50%{
-        transform: rotate(-180deg);
+    50% {
+      transform: rotate(-180deg);
     }
-    75%{
-        transform: rotate(-270deg);
+    75% {
+      transform: rotate(-270deg);
     }
     100% {
       transform: rotate(-360deg);
     }
-    
   }
   
   
