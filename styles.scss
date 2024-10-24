@@ -226,10 +226,12 @@ footer{
     border: none;
     position: relative;
     background: #353535;
-    height: 750px;
+    height: 650px;
     width: 100%;
   }
   
+
+
   .moving-border-content {
     position: absolute;
     background: radial-gradient(circle, rgba(28, 28, 40, 1) 25%, rgb(9, 9, 77) 100%);
@@ -249,7 +251,10 @@ footer{
   }
   
   .animated-image {
-    width: 100%;
+    margin-bottom: auto;
+    top: 0vh;
+    width: 25vw;
+    margin-right: 10vw;
     height: auto;
     max-width: 25%;
     border-radius: 10px;
@@ -331,19 +336,17 @@ footer{
   /* Effet de lumière pulsante sur le texte */
   .pulsating-text {
     margin-top: 20px;
+    padding-left: 0;
+    text-align: left;
     font-size: 3rem;
-    animation: pulsate 3s ease-in-out infinite;
-  }
+    white-space: normal; /* Permet l'affichage normal du texte */
+    word-wrap: break-word; /* Coupe les mots trop longs si nécessaire */
+    margin-right: 0; /* Supprime la marge droite excessive */
+    max-width: 100%; /* Assure que le texte utilise toute la largeur disponible */
+}
   
   /* Effet de lumière pulsante sur le texte */
-  @keyframes pulsate {
-    0%, 100% {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
-    }
-    50% {
-      text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8);
-    }
-  }
+  
   
   /* Animation de la bordure lumineuse en arrière-plan */
   .moving-border-mover {
@@ -383,4 +386,82 @@ footer{
       transform: rotate(-360deg);
     }
   }
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+  }
   
+  .image-wrapper {
+    flex: 1;
+    
+    
+  }
+  
+  .text-wrapper {
+    flex: 1;
+    
+  }
+  
+  .animated-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .pulsating-text {
+    font-size: 2rem;
+  }
+
+
+
+
+
+
+
+
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content h2 {
+    color: #ff0000;
+  }
+
+  .modal-content p {
+    margin-bottom: 20px;
+  }
+
+  .modal-content button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .modal-content button:hover {
+    background-color: #45a049;
+  }

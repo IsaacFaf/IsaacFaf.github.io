@@ -42,9 +42,3 @@ updateVideo()
 
 
 
-/* Parallax effect when scrolling */
-window.addEventListener('scroll', function() {
-    const parallaxImage = document.querySelector('.parallax-image');
-    let scrollPosition = window.pageYOffset;
-    parallaxImage.style.transform = 'translateY(' + scrollPosition * 0.3 + 'px)';
-  });

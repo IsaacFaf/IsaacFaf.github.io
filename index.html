@@ -8,6 +8,37 @@
     <link rel="stylesheet" href="styles.css"> <!-- Votre fichier CSS ici -->
 </head>
 <body>
+
+
+
+    <div id="epilepsyModal" class="modal">
+        <div class="modal-content">
+          <h2>Avertissement : Risque de crises d'épilepsie photosensible</h2>
+          <p>Ce site contient des effets visuels, notamment des animations visuels, susceptibles de déclencher des crises d'épilepsie photosensible chez certaines personnes.</p>
+          <p>Si vous êtes sujet à l'épilepsie sévèrement ou à une sensibilité aux lumières clignotantes, veuillez faire preuve de prudence. Pour éviter tout risque, je vous recommande de quitter ce site pour des mesures préventives.</p>
+          <button onclick="closeModal()">Je comprends</button>
+        </div>
+      </div>
+      
+      <script>
+        // Affiche la fenêtre modale lors du chargement de la page
+        window.onload = function() {
+          document.getElementById('epilepsyModal').style.display = 'flex';
+        };
+      
+        // Fonction pour fermer la modale
+        function closeModal() {
+          document.getElementById('epilepsyModal').style.display = 'none';
+        }
+      </script>
+
+
+
+
+
+
+
+
     <header>
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="#">LOGO</a>
@@ -27,8 +58,12 @@
             <div class="moving-border-mover bg-1"></div>
             <span class="moving-border-content">
               <div class="content-wrapper">
-                <img src="medias/DSC09827.JPG" alt="" class="animated-image">
-                <h1 class="pulsating-text">Je suis Isaac Fafard</h1>
+                <div class="image-wrapper">
+                  <img src="medias/DSC09827.JPG" alt="" class="animated-image">
+                </div>
+                <div class="text-wrapper">
+                  <h1 class="pulsating-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sapiente a eius atque vitae adipisci rem reprehenderit quas excepturi quibusdam cum at, vero deserunt itaque rerum, deleniti animi sit aliquam!</h1>
+                </div>
               </div>
             </span>
           </section>
