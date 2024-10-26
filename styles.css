@@ -2,6 +2,35 @@
 header {
   background-color: #474556;
 }
+header .navbar-nav .nav-link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+header .navbar-nav .nav-link:hover {
+  color: #221248;
+  font-size: 1.08rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+header .navbar-nav .nav-link:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #221248;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+header .navbar-nav .nav-link:hover:before {
+  width: 100%;
+  left: 0;
+  transform: translateX(0);
+}
 header .navbar-brand {
   color: white;
 }
@@ -77,23 +106,41 @@ section.carroussel .title {
   padding-bottom: 5px;
   border: 1px solid black 100%;
 }
-section.carroussel .defilement {
-  padding-top: 15px;
-  display: grid;
-  gap: 15px;
-  justify-content: center;
+
+.carroussel {
+  position: relative;
+}
+.carroussel .defilement {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.carroussel .video-containers {
+  position: relative;
   width: 100%;
 }
-section.carroussel .defilement video {
-  min-width: 75%;
-  min-height: 75%;
-  background-color: beige;
-  opacity: 24.8%;
+.carroussel .video-containers video {
   width: 100%;
+  border-radius: 15px;
 }
-section.carroussel .defilement canvas {
-  background-color: black;
-  opacity: 24.8%;
+.carroussel .video-containers .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://i.postimg.cc/9MtT4GZY/view.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-color: hsla(178, 100%, 50%, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  z-index: 2;
+}
+.carroussel .video-containers:hover .overlay {
+  opacity: 1;
 }
 
 footer {
@@ -512,15 +559,68 @@ body {
   }
 }
 /* Effet de lumière pulsante sur le texte */
+/* Applique l'effet de typing sans changer la disposition d'origine */
+@keyframes typing {
+  0% {
+    width: 0; /* Commence avec une largeur de zéro */
+  }
+  100% {
+    width: 100%; /* Fait apparaître tout le texte */
+    border-right: 0px solid white;
+  }
+}
+/* Animation du curseur clignotant */
+@keyframes blink-caret {
+  0%, 100% {
+    border-right: 2px solid none; /* Invisible au début et à la fin */
+  }
+  50% {
+    border-right: 2px solid white;
+  }
+}
 .pulsating-text {
-  margin-top: 20px;
-  padding-left: 0;
-  text-align: left;
-  font-size: 3rem;
-  white-space: normal; /* Permet l'affichage normal du texte */
-  word-wrap: break-word; /* Coupe les mots trop longs si nécessaire */
-  margin-right: 0; /* Supprime la marge droite excessive */
-  max-width: 100%; /* Assure que le texte utilise toute la largeur disponible */
+  margin-bottom: 20%;
+  width: 100%;
+}
+.pulsating-text span {
+  right: 18%;
+  display: block; /* Fait que chaque ligne est séparée verticalement */
+  position: relative;
+  overflow: hidden;
+  text-align: right;
+  white-space: nowrap; /* Optionnel, à ajuster selon vos préférences */
+  /* Optionnel, à ajuster selon vos préférences */
+  /* Optionnel, à ajuster selon vos préférences */
+  /* Curseur */
+  width: 0; /* Initialisé à zéro pour l'effet */
+  /* Durées d'animation ajustées selon le texte */
+  /* Stoppe le clignotement du curseur après l'écriture du texte */
+}
+.pulsating-text span:nth-child(1) {
+  animation: typing 4s steps(50, end) forwards, blink-caret 1s step-end 5; /* Durée de blink-caret = 4s */
+  animation-delay: 0s;
+}
+.pulsating-text span:nth-child(2) {
+  margin-top: 45px;
+  animation: typing 4s steps(50, end) forwards, blink-caret 1s step-end 4;
+  animation-delay: 5s; /* 5s après le premier span */
+}
+.pulsating-text span:nth-child(3) {
+  animation: typing 5s steps(50, end) forwards, blink-caret 1s step-end 5;
+  animation-delay: 9s; /* 10s après le deuxième span */
+}
+.pulsating-text span:nth-child(4) {
+  animation: typing 4s steps(50, end) forwards, blink-caret 1s step-end 5;
+  animation-delay: 15s; /* 15s après le troisième span */
+}
+.pulsating-text span:nth-child(5) {
+  margin-top: 25px;
+  animation: typing 4s steps(50, end) forwards, blink-caret 1s step-end 5;
+  animation-delay: 20s; /* 20s après le quatrième span */
+}
+.pulsating-text span:last-child {
+  animation: typing 4s steps(50, end) forwards, blink-caret 1s step-end infinite; /* Le curseur ne clignote pas après l'animation */
+  animation-delay: 24s; /* Dernier span avec un délai pour le curseur */
 }
 
 /* Effet de lumière pulsante sur le texte */
@@ -568,6 +668,8 @@ body {
 
 .text-wrapper {
   flex: 1;
+  align-self: center;
+  margin-right: 15px;
 }
 
 .animated-image {
@@ -577,6 +679,7 @@ body {
 
 .pulsating-text {
   font-size: 2rem;
+  text-align: right;
 }
 
 .modal {
