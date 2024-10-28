@@ -318,6 +318,140 @@ section.carroussel .title {
 .carroussel .defilement .video-containers3:hover .overlay {
   opacity: 1;
 }
+.carroussel .defilement .card4 {
+  min-width: 300px; /* Largeur minimale des cartes */
+  margin-right: 20px; /* Espace entre les cartes */
+  padding: 20px;
+  background-color: #474556;
+  border: 1px solid #221248;
+  border-radius: 8px;
+}
+.carroussel .defilement .card4 h1 {
+  align-self: center;
+}
+.carroussel .defilement .card4 video {
+  align-self: center;
+}
+.carroussel .defilement .card4 button {
+  border-radius: 15px;
+  border-color: #221248;
+  align-self: center;
+  width: 150px;
+  background: rgb(221, 71, 120);
+  background: linear-gradient(183deg, rgb(221, 71, 120) 0%, rgb(4, 16, 121) 100%);
+}
+.carroussel .defilement .card-carousel4 {
+  display: flex;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 20px;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.carroussel .defilement .video-containers4 {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Limite la largeur */
+  margin: 0 auto; /* Centre le conteneur */
+  display: flex; /* Utilisation de Flexbox pour le centrage */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  flex-direction: column; /* Empile les éléments si nécessaire */
+}
+.carroussel .defilement .video-containers4.hidden {
+  display: none;
+}
+.carroussel .defilement .video-containers4 video {
+  max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
+  border-radius: 2px;
+  border: 8px solid rgb(10, 1, 37);
+}
+.carroussel .defilement .video-containers4 .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(90%);
+  background-image: url("https://i.postimg.cc/9MtT4GZY/view.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-color: hsla(178, 15%, 90%, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  z-index: 2;
+}
+.carroussel .defilement .video-containers4:hover .overlay {
+  opacity: 1;
+}
+.carroussel .defilement .card5 {
+  min-width: 300px; /* Largeur minimale des cartes */
+  margin-right: 20px; /* Espace entre les cartes */
+  padding: 20px;
+  background-color: #474556;
+  border: 1px solid #221248;
+  border-radius: 8px;
+}
+.carroussel .defilement .card5 h1 {
+  align-self: center;
+}
+.carroussel .defilement .card5 video {
+  align-self: center;
+}
+.carroussel .defilement .card5 button {
+  border-radius: 15px;
+  border-color: #221248;
+  align-self: center;
+  width: 150px;
+  background: rgb(221, 71, 120);
+  background: linear-gradient(183deg, rgb(221, 71, 120) 0%, rgb(4, 16, 121) 100%);
+}
+.carroussel .defilement .card-carousel5 {
+  display: flex;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 20px;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.carroussel .defilement .video-containers5 {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Limite la largeur */
+  margin: 0 auto; /* Centre le conteneur */
+  display: flex; /* Utilisation de Flexbox pour le centrage */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  flex-direction: column; /* Empile les éléments si nécessaire */
+}
+.carroussel .defilement .video-containers5.hidden {
+  display: none;
+}
+.carroussel .defilement .video-containers5 video {
+  max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
+  border-radius: 2px;
+  border: 8px solid rgb(10, 1, 37);
+}
+.carroussel .defilement .video-containers5 .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(90%);
+  background-image: url("https://i.postimg.cc/9MtT4GZY/view.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-color: hsla(178, 15%, 90%, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  z-index: 2;
+}
+.carroussel .defilement .video-containers5:hover .overlay {
+  opacity: 1;
+}
 .carroussel .defilement .video-containers {
   position: relative;
   width: 100%;

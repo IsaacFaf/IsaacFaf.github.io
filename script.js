@@ -85,7 +85,7 @@ var elem = document.getElementById("myvideo");//FULLSCREEN
     })
 
 
-    for (let i= 1; i < 4; i++){
+    for (let i= 1; i < 6; i++){
         document.addEventListener('DOMContentLoaded', function () {
             if (i=1){
             const video1 = document.querySelector('.video-containers'+i);
@@ -170,6 +170,92 @@ var elem = document.getElementById("myvideo");//FULLSCREEN
                     })
             }
 
+
+            if (i=3){
+                const video3 = document.querySelector('.video-containers'+i);
+                const cardCarousel3 = document.querySelector('.card-carousel'+i);
+                const closeCarouselButtons3 = document.querySelectorAll('.close-carousel'+i); // Sélectionne tous les boutons "Fermer"
+            
+            
+                video3.addEventListener('click', () => {
+                
+                    cardCarousel3.classList.toggle('hidden');
+                    video3.classList.add("hidden");
+                    cardCarousel3.classList.toggle('visible');
+            
+            
+                    
+            
+            
+            
+                });
+            
+                // Ajoute un événement "click" à chaque bouton "Fermer"
+                closeCarouselButtons3.forEach(button => {
+                    button.addEventListener('click', () => {
+                        cardCarousel3.classList.add('hidden');
+                        video3.classList.remove("hidden");
+                        cardCarousel3.classList.remove('visible');
+                    });
+                });
+            var elem3 = document.getElementById("myvideo"+i);//FULLSCREEN
+                    elem3.addEventListener("click", ()=>{
+                        if (elem3.requestFullscreen) {
+                        elem3.requestFullscreen();
+                        } else if (elem3.mozRequestFullScreen) {
+                        elem3.mozRequestFullScreen();
+                        } else if (elem3.webkitRequestFullscreen) {
+                        elem3.webkitRequestFullscreen();
+                        } else if (elem3.msRequestFullscreen) { 
+                        elem3.msRequestFullscreen();
+                        }
+                    })
+            }
+
+
+
+
+
+            if (i=4){
+                const video4 = document.querySelector('.video-containers'+i);
+                const cardCarousel4 = document.querySelector('.card-carousel'+i);
+                const closeCarouselButtons4 = document.querySelectorAll('.close-carousel'+i); // Sélectionne tous les boutons "Fermer"
+            
+            
+                video4.addEventListener('click', () => {
+                
+                    cardCarousel4.classList.toggle('hidden');
+                    video4.classList.add("hidden");
+                    cardCarousel4.classList.toggle('visible');
+            
+            
+                    
+            
+            
+            
+                });
+            
+                // Ajoute un événement "click" à chaque bouton "Fermer"
+                closeCarouselButtons4.forEach(button => {
+                    button.addEventListener('click', () => {
+                        cardCarousel4.classList.add('hidden');
+                        video4.classList.remove("hidden");
+                        cardCarousel4.classList.remove('visible');
+                    });
+                });
+            var elem4 = document.getElementById("myvideo"+i);//FULLSCREEN
+                    elem4.addEventListener("click", ()=>{
+                        if (elem4.requestFullscreen) {
+                        elem4.requestFullscreen();
+                        } else if (elem4.mozRequestFullScreen) {
+                        elem4.mozRequestFullScreen();
+                        } else if (elem4.webkitRequestFullscreen) {
+                        elem4.webkitRequestFullscreen();
+                        } else if (elem4.msRequestFullscreen) { 
+                        elem4.msRequestFullscreen();
+                        }
+                    })
+            }
             
         });
         

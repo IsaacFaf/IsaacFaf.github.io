@@ -162,7 +162,7 @@ section.carroussel {
 
 
       
-      @for $i from 1 through 3{
+      @for $i from 1 through 5{
 
         .card#{$i} {
           min-width: 300px; /* Largeur minimale des cartes */
