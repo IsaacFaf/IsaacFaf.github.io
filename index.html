@@ -11,7 +11,7 @@
 
 
 
-    <div id="epilepsyModal" class="modal">
+    <!--<div id="epilepsyModal" class="modal">
         <div class="modal-content">
           <h2>Avertissement : Risque de crises d'épilepsie photosensible</h2>
           <p>Ce site contient des effets visuels, notamment des animations visuels, susceptibles de déclencher des crises d'épilepsie photosensible chez certaines personnes.</p>
@@ -31,7 +31,7 @@
           document.getElementById('epilepsyModal').style.display = 'none';
         }
       </script>
-
+-->
 
 
 
@@ -111,40 +111,72 @@
                     <div class="overlay"></div>
                 </div>
             </div>
-            <button class="arrow-down">arrow-down</button>
+            
             
             <!-- Carrousel des cartes -->
             <div class="card-carousel hidden">
                 <div class="card" id="card-1">
-                    <video controls autoplay muted>
+                    <video id="myvideo" autoplay muted style="width: 500px;">
                         <source src="medias/La Ville.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas cette vidéo.
                     </video> 
                     <br>
-                    <button class="close-carousel">Fermer</button>
+                    
                     <h2 style="text-align: center;">La ville</h2>
+                    <h6>Projet étudiant consistant à recréé un univers qui suit la thématique d'un poème choisi.</h6>
+                    <h5>Temps de conception: <h4>40 heures</h4></h5>
+                    <button class="close-carousel">Fermer</button>
                 </div>
-                <div class="card" id="card-2">
-                    <h2>Détails du projet 2</h2>
-                    <p>Voici des informations supplémentaires sur le projet 2.</p>
+               <!-- <div class="card" id="card-2">
+                    <h2>Description du projet</h2>
+                    <p>Le projet <strong>La Ville</strong>, est un projet ex&eacute;cuter dans le cadre d'un cours &eacute;tudiant. Nous devions, en équipe, produire une oeuvre par rapport à un poème. <br> <br></p>
+                        <h5>Ma contribution: <ul><li>Animateur 2D</li> <li>Acteur</li> <li>Monteur vidéo</li> <li>Monteur Sonore</li> <li></li></ul></h5>
                 </div>
                 <div class="card" id="card-3">
                     <h2>Détails du projet 3</h2>
                     <p>Voici des informations supplémentaires sur le projet 3.</p>
                     <button class="close-carousel">Fermer</button>
                 </div>
-                <button class="close-carousel">Fermer</button>
+                <button class="close-carousel">Fermer</button>-->
             </div>
             
         
             <!-- Vidéo en grand format -->
-            <div class="fullscreen-video hidden">
-                <video id="large-video" controls>
-                    <source src="medias/La Ville.mp4" type="video/mp4">
-                    Votre navigateur ne supporte pas la vidéo courante.
-                </video>
-                <button class="close-fullscreen">Fermer</button>
-            </div>
+            
+
+
+
+
+
+
+            <section class="carroussel">
+                
+                <div class="defilement">
+                    <div class="video-containers1">
+                        <video class="no1" autoplay muted>
+                            <source src="medias/vr.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la vidéo courante.
+                        </video>
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+                <button class="arrow-down">arrow-down</button>
+                
+                <!-- Carrousel des cartes -->
+                <div class="card-carousel1 hidden">
+                    <div class="card" id="card-1">
+                        <video id="myvideo1" autoplay muted style="width: 500px;">
+                            <source src="medias/vr.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas cette vidéo.
+                        </video> 
+                        <br>
+                        
+                        <h2 style="text-align: center;">La ville</h2>
+                        <h6>Projet étudiant consistant à recréé un univers qui suit la thématique d'un poème choisi.</h6>
+                        <h5>Temps de conception: <h4>40 heures</h4></h5>
+                        <button class="close-carousel1">Fermer</button>
+                    </div>
+                </div>
         </section>
         
         
