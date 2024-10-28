@@ -37,8 +37,25 @@ videos.forEach((video, index) => {
     });
 });
 
-// Initialiser la première vidéo
-updateVideo()
 
 
+
+  console.log("ce rend la");
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const video = document.querySelector('.video-containers');
+    const cardCarousel = document.querySelector('.card-carousel');
+    const closeCarouselButton = document.querySelector('.close-carousel');
+
+    video.addEventListener('click', () => {
+        cardCarousel.classList.toggle('hidden');
+        cardCarousel.classList.toggle('visible');
+    });
+
+    closeCarouselButton.addEventListener('click', () => {
+        cardCarousel.classList.add('hidden');
+        cardCarousel.classList.remove('visible');
+    });
+});
+    
 

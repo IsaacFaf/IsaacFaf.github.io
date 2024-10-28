@@ -125,62 +125,115 @@ header{
     .right-arrow {
         right: 10px;
 }}
-section.carroussel{
-    background-color: $bgProjet;
-    width: 100%;
-    padding-top: 5px;
-    .title{
-        color: white;
-        background-color: $titleProjet;
-        width: 100%;
-        text-align: center;
-        margin-top: 15px;
-        box-shadow: 2px 2.5px 5px 2px rgb(0 0 0 / .8);
-        padding-top: 3px;
-        padding-bottom: 5px;
-        border: 1px solid black 100%;
-        
-    }
+section.carroussel {
+  background-color: $bgProjet;
+  width: 100%;
+  padding-top: 5px;
+
+
+
+  
+
+
+
+
+  .title {
+      color: white;
+      background-color: $titleProjet;
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+      box-shadow: 2px 2.5px 5px 2px rgb(0 0 0 / .8);
+      padding-top: 3px;
+      padding-bottom: 5px;
+      border: 1px solid black;
   }
-  .carroussel {
-    position: relative;
-    .defilement {
-        display: flex; // Assurez-vous que les canaux s'affichent horizontalement
-        flex-direction: row; // Ajuste la direction si nécessaire
-        position: relative; // Nécessaire pour le positionnement absolu des éléments enfants
-    }
-
-    .video-containers {
-        position: relative; // Pour positionner l'overlay par rapport à la vidéo
-        width: 100%; // Ajustez la largeur selon vos besoins
-
-        video {
-            width: 100%; // Prend toute la largeur du conteneur
-            border-radius: 15px; // Ajoute un effet d'arrondi si souhaité
-        }
-
-        .overlay {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url("https://i.postimg.cc/9MtT4GZY/view.png"); // L'image de superposition
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 5rem;
-            background-color: hsla(178, 100%, 50%, 0.3); // Couleur de fond semi-transparente
-            opacity: 0; // Masqué par défaut
-            transition: opacity 0.3s ease-out; // Animation douce
-            z-index: 2; // Au-dessus de la vidéo
-        }
-
-        &:hover .overlay {
-            opacity: 1; // Affiche l'overlay au survol
-        }
-    }
 }
+
+.carroussel {
+  position: relative;
+
+  .defilement {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      flex-direction: column; /* Pour empiler les éléments si nécessaire */
+
+      .video-containers {
+          position: relative;
+          width: 100%; 
+          max-width: 500px; /* Limite la largeur */
+          margin: 0 auto; /* Centre le conteneur */
+          display: flex; /* Utilisation de Flexbox pour le centrage */
+          justify-content: center; /* Centre horizontalement */
+          align-items: center; /* Centre verticalement */
+          flex-direction: column; /* Empile les éléments si nécessaire */
+                  
+          video {
+              max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
+              border-radius: 2px;
+              border: 8px solid rgb(10, 1, 37);
+              
+          }
+
+          .overlay {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              transform: scaleX(90%);
+              background-image: url("https://i.postimg.cc/9MtT4GZY/view.png");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 5rem;
+              background-color: hsla(178, 15%, 90%, 0.4);
+              opacity: 0;
+              transition: opacity 0.3s ease-out;
+              z-index: 2;
+          }
+
+          &:hover .overlay {
+              opacity: 1;
+          }
+      }
+  }
+}
+
+
+.card-carousel {
+  display: flex;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  min-width: 300px; /* Largeur minimale des cartes */
+  margin-right: 20px; /* Espace entre les cartes */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none; /* Masquer le carrousel par défaut */
+}
+
+.visible {
+  display: flex; /* Affiche le carrousel */
+}
+
+
+
+
+
+
+
+
 
 footer{
     background-color: $footer;

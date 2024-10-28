@@ -82,17 +82,17 @@
 
 
             <div class="accueil-presentation">
-                <div class="video-container">
+                <div class="video-container"><!-- CECI EST PAS LA BONNE SECTION CHATGPT-->
                     <video class="presentation" autoplay muted>
-                        <source src="sources/medias/videos/accueil-presentation.mp4" type="video/mp4">
+                        <source src="medias/La Ville.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas la vidéo courante
                     </video>
                     <video class="presentation" muted>
-                        <source src="sources/medias/videos/ContributionDon.mp4" type="video/mp4">
+                        <source src="#" type="video/mp4">
                         Votre navigateur ne supporte pas la vidéo courante
                     </video>
                     <video class="presentation" muted>
-                        <source src="sources/medias/videos/santeDroitsEtLiberte.mp4" type="video/mp4">
+                        <source src="#" type="video/mp4">
                         Votre navigateur ne supporte pas la vidéo courante
                     </video>
                 </div>
@@ -104,19 +104,45 @@
             <h1 class="title">Projets divers</h1>
             <div class="defilement">
                 <div class="video-containers">
-                    <img src="medias/DSC09827.JPG" width="350" height="auto">
-                  <!--  <video class="no1" autoplay muted>
-                        <source src="medias/Fafard_Isaac_LaVille_01_582-224MO_h264.mov" type="video/mov">
-                        Votre navigateur ne supporte pas la vidéo courante
-                    </video>-->
+                    <video class="no1" autoplay muted>
+                        <source src="medias/La Ville.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la vidéo courante.
+                    </video>
                     <div class="overlay"></div>
                 </div>
-                <canvas></canvas>
-                <canvas></canvas>
-                <canvas></canvas>
             </div>
             <button class="arrow-down">arrow-down</button>
+            
+            <!-- Carrousel des cartes -->
+            <div class="card-carousel hidden">
+                <div class="card" id="card-1">
+                    <h2>Détails du projet 1</h2>
+                    <p>Voici des informations supplémentaires sur le projet 1.</p>
+                </div>
+                <div class="card" id="card-2">
+                    <h2>Détails du projet 2</h2>
+                    <p>Voici des informations supplémentaires sur le projet 2.</p>
+                </div>
+                <div class="card" id="card-3">
+                    <h2>Détails du projet 3</h2>
+                    <p>Voici des informations supplémentaires sur le projet 3.</p>
+                </div>
+                <button class="close-carousel">Fermer</button>
+            </div>
+        
+            <!-- Vidéo en grand format -->
+            <div class="fullscreen-video hidden">
+                <video id="large-video" controls>
+                    <source src="medias/La Ville.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo courante.
+                </video>
+                <button class="close-fullscreen">Fermer</button>
+            </div>
         </section>
+        
+        
+        
+        
         
     </main>
     
@@ -144,7 +170,7 @@
             <p class="copyright">Portfolio de Isaac. Copyright</p>
         </section>
     </footer>
-
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
