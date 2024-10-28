@@ -87,45 +87,93 @@ var elem = document.getElementById("myvideo");//FULLSCREEN
 
     for (let i= 1; i < 4; i++){
         document.addEventListener('DOMContentLoaded', function () {
+            if (i=1){
             const video1 = document.querySelector('.video-containers'+i);
             const cardCarousel1 = document.querySelector('.card-carousel'+i);
             const closeCarouselButtons1 = document.querySelectorAll('.close-carousel'+i); // Sélectionne tous les boutons "Fermer"
-        
+       
             video1.addEventListener('click', () => {
-        
-                cardCarousel1.classList.toggle('hidden');
-                video1.classList.add("hidden");
-                cardCarousel1.classList.toggle('visible');
-        
-        
                 
-        
-        
-        
-            });
-        
-            // Ajoute un événement "click" à chaque bouton "Fermer"
-            closeCarouselButtons1.forEach(button => {
-                button.addEventListener('click', () => {
-                    cardCarousel1.classList.add('hidden');
-                    video1.classList.remove("hidden");
-                    cardCarousel1.classList.remove('visible');
+                        cardCarousel1.classList.toggle('hidden');
+                        video1.classList.add("hidden");
+                        cardCarousel1.classList.toggle('visible');
+                
+                
+                        
+                
+                
+                
+                    });
+                
+                    // Ajoute un événement "click" à chaque bouton "Fermer"
+                    closeCarouselButtons1.forEach(button => {
+                        button.addEventListener('click', () => {
+                            cardCarousel1.classList.add('hidden');
+                            video1.classList.remove("hidden");
+                            cardCarousel1.classList.remove('visible');
+                        });
+                    });
+                    var elem1 = document.getElementById("myvideo1");//FULLSCREEN
+                    elem1.addEventListener("click", ()=>{
+                        if (elem1.requestFullscreen) {
+                        elem1.requestFullscreen();
+                        } else if (elem.mozRequestFullScreen) {
+                        elem1.mozRequestFullScreen();
+                        } else if (elem.webkitRequestFullscreen) {
+                        elem1.webkitRequestFullscreen();
+                        } else if (elem.msRequestFullscreen) { 
+                        elem1.msRequestFullscreen();
+                        }
+                    })
+        }
+
+
+
+            if (i=2){
+                const video2 = document.querySelector('.video-containers'+i);
+                const cardCarousel2 = document.querySelector('.card-carousel'+i);
+                const closeCarouselButtons2 = document.querySelectorAll('.close-carousel'+i); // Sélectionne tous les boutons "Fermer"
+            
+            
+                video2.addEventListener('click', () => {
+                
+                    cardCarousel2.classList.toggle('hidden');
+                    video2.classList.add("hidden");
+                    cardCarousel2.classList.toggle('visible');
+            
+            
+                    
+            
+            
+            
                 });
-            });
+            
+                // Ajoute un événement "click" à chaque bouton "Fermer"
+                closeCarouselButtons2.forEach(button => {
+                    button.addEventListener('click', () => {
+                        cardCarousel2.classList.add('hidden');
+                        video2.classList.remove("hidden");
+                        cardCarousel2.classList.remove('visible');
+                    });
+                });
+            var elem2 = document.getElementById("myvideo2");//FULLSCREEN
+                    elem2.addEventListener("click", ()=>{
+                        if (elem2.requestFullscreen) {
+                        elem2.requestFullscreen();
+                        } else if (elem2.mozRequestFullScreen) {
+                        elem2.mozRequestFullScreen();
+                        } else if (elem2.webkitRequestFullscreen) {
+                        elem2.webkitRequestFullscreen();
+                        } else if (elem2.msRequestFullscreen) { 
+                        elem2.msRequestFullscreen();
+                        }
+                    })
+            }
+
+            
         });
         
         
-        var elem1 = document.getElementById("myvideo1");//FULLSCREEN
-            elem1.addEventListener("click", ()=>{
-                if (elem1.requestFullscreen) {
-                elem1.requestFullscreen();
-                } else if (elem.mozRequestFullScreen) {
-                elem1.mozRequestFullScreen();
-                } else if (elem.webkitRequestFullscreen) {
-                elem1.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { 
-                elem1.msRequestFullscreen();
-                }
-            })
+        
     }
         
