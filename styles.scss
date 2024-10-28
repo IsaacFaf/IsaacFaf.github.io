@@ -163,6 +163,7 @@ section.carroussel {
       .video-containers {
           position: relative;
           width: 100%; 
+          
           max-width: 500px; /* Limite la largeur */
           margin: 0 auto; /* Centre le conteneur */
           display: flex; /* Utilisation de Flexbox pour le centrage */

@@ -45,7 +45,7 @@ videos.forEach((video, index) => {
   document.addEventListener('DOMContentLoaded', function () {
     const video = document.querySelector('.video-containers');
     const cardCarousel = document.querySelector('.card-carousel');
-    const closeCarouselButton = document.querySelector('.close-carousel');
+    const closeCarouselButtons = document.querySelectorAll('.close-carousel'); // Sélectionne tous les boutons "Fermer"
 
     video.addEventListener('click', () => {
         cardCarousel.classList.toggle('hidden');
@@ -53,11 +53,14 @@ videos.forEach((video, index) => {
         cardCarousel.classList.toggle('visible');
     });
 
-    closeCarouselButton.addEventListener('click', () => {
-        cardCarousel.classList.add('hidden');
-        video.classList.remove("hidden");
-        cardCarousel.classList.remove('visible');
+    // Ajoute un événement "click" à chaque bouton "Fermer"
+    closeCarouselButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            cardCarousel.classList.add('hidden');
+            video.classList.remove("hidden");
+            cardCarousel.classList.remove('visible');
+        });
     });
 });
-    
+
 
