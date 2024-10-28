@@ -127,6 +127,9 @@ section.carroussel .title {
   align-items: center; /* Centre verticalement */
   flex-direction: column; /* Empile les éléments si nécessaire */
 }
+.carroussel .defilement .video-containers.hidden {
+  display: none;
+}
 .carroussel .defilement .video-containers video {
   max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
   border-radius: 2px;

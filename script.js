@@ -49,11 +49,13 @@ videos.forEach((video, index) => {
 
     video.addEventListener('click', () => {
         cardCarousel.classList.toggle('hidden');
+        video.classList.add("hidden");
         cardCarousel.classList.toggle('visible');
     });
 
     closeCarouselButton.addEventListener('click', () => {
         cardCarousel.classList.add('hidden');
+        video.classList.remove("hidden");
         cardCarousel.classList.remove('visible');
     });
 });

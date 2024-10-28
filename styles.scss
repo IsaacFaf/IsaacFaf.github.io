@@ -169,7 +169,9 @@ section.carroussel {
           justify-content: center; /* Centre horizontalement */
           align-items: center; /* Centre verticalement */
           flex-direction: column; /* Empile les éléments si nécessaire */
-                  
+          &.hidden{
+            display: none;
+          }
           video {
               max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
               border-radius: 2px;
