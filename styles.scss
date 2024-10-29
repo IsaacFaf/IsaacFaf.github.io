@@ -160,6 +160,97 @@ section.carroussel {
       width: 100%;
       flex-direction: column; /* Pour empiler les éléments si nécessaire */
 
+
+      
+      @for $i from 1 through 5{
+
+        .card#{$i} {
+          min-width: 300px; /* Largeur minimale des cartes */
+          margin-right: 20px; /* Espace entre les cartes */
+          padding: 20px;
+          
+          background-color: $nav;
+          border: 1px solid $bgProjet;
+          
+          border-radius: 8px;
+        
+          h1{
+            align-self: center;
+          }
+          video{
+            align-self: center;
+            
+          }
+          button{
+            border-radius: 15px;
+            border-color: #221248;
+            align-self: center;
+            width: 150px;
+            background: rgb(221,71,120);
+        background: linear-gradient(183deg, rgba(221,71,120,1) 0%, rgba(4,16,121,1) 100%);
+        }
+        }
+
+
+        .card-carousel#{$i} {
+          display: flex;
+          overflow-x: auto; /* Permet le défilement horizontal */
+          padding: 20px;
+          justify-content: center;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .video-containers#{$i}{
+            position: relative;
+            width: 100%; 
+            
+            max-width: 500px; /* Limite la largeur */
+            margin: 0 auto; /* Centre le conteneur */
+            display: flex; /* Utilisation de Flexbox pour le centrage */
+            justify-content: center; /* Centre horizontalement */
+            align-items: center; /* Centre verticalement */
+            flex-direction: column; /* Empile les éléments si nécessaire */
+            &.hidden{
+              display: none;
+            }
+             
+            video {
+                max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
+                border-radius: 2px;
+                border: 8px solid rgb(10, 1, 37);
+                
+            }
+  
+            .overlay {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                transform: scaleX(90%);
+                background-image: url("https://i.postimg.cc/9MtT4GZY/view.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 5rem;
+                background-color: hsla(178, 15%, 90%, 0.4);
+                opacity: 0;
+                transition: opacity 0.3s ease-out;
+                z-index: 2;
+            }
+  
+            &:hover .overlay {
+                opacity: 1;
+            }
+        
+        }
+                  }
+
+
+
+
+
+
+
       .video-containers {
           position: relative;
           width: 100%; 
@@ -173,6 +264,7 @@ section.carroussel {
           &.hidden{
             display: none;
           }
+           
           video {
               max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
               border-radius: 2px;
@@ -210,7 +302,7 @@ section.carroussel {
   display: flex;
   overflow-x: auto; /* Permet le défilement horizontal */
   padding: 20px;
-  background-color: white;
+  justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -218,8 +310,27 @@ section.carroussel {
   min-width: 300px; /* Largeur minimale des cartes */
   margin-right: 20px; /* Espace entre les cartes */
   padding: 20px;
-  border: 1px solid #ccc;
+  
+  background-color: $nav;
+  border: 1px solid $bgProjet;
+  
   border-radius: 8px;
+
+  h1{
+    align-self: center;
+  }
+  video{
+    align-self: center;
+    
+  }
+  button{
+    border-radius: 15px;
+    border-color: #221248;
+    align-self: center;
+    width: 150px;
+    background: rgb(221,71,120);
+background: linear-gradient(183deg, rgba(221,71,120,1) 0%, rgba(4,16,121,1) 100%);
+}
 }
 
 .hidden {
@@ -376,6 +487,7 @@ footer{
     margin-bottom: auto;
     top: 0vh;
     width: 25vw;
+    
     margin-right: 10vw;
     height: auto;
     max-width: 25%;
@@ -596,6 +708,7 @@ footer{
   .animated-image {
     max-width: 100%;
     height: auto;
+    max-height: 620px;
   }
   
   .pulsating-text {
