@@ -41,276 +41,99 @@ videos.forEach((video, index) => {
 
 
   console.log("ce rend la");
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const video = document.querySelector('.video-containers');
-    const cardCarousel = document.querySelector('.card-carousel');
-    const closeCarouselButtons = document.querySelectorAll('.close-carousel'); // Sélectionne tous les boutons "Fermer"
+    
+  document.addEventListener('DOMContentLoaded', function () {// VR
+    const video = document.querySelector('.video-containers1');
+    const cardCarousel = document.querySelector('.card-carousel1');
+    const closeCarouselButton = document.querySelector('.close-carousel1'); // Bouton "Fermer"
 
     video.addEventListener('click', () => {
-
-        cardCarousel.classList.toggle('hidden');
-        video.classList.add("hidden");
-        cardCarousel.classList.toggle('visible');
-
-
-        
-
-
-
+        cardCarousel.classList.remove('hidden'); // Afficher le modal
     });
 
-    // Ajoute un événement "click" à chaque bouton "Fermer"
-    closeCarouselButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            cardCarousel.classList.add('hidden');
-            video.classList.remove("hidden");
-            cardCarousel.classList.remove('visible');
-        });
+    // Fermer le modal
+    closeCarouselButton.addEventListener('click', () => {
+        cardCarousel.classList.add('hidden'); // Masquer le modal
     });
 });
 
 
-var elem = document.getElementById("myvideo");//FULLSCREEN
-    elem.addEventListener("click", ()=>{
-        if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) {
-        elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { 
-        elem.msRequestFullscreen();
-        }
-    })
+
+document.addEventListener('DOMContentLoaded', function () {//ANIMATION STOP MOTION
+    const videof = document.querySelector('.video-containers');
+    const cardCarouself = document.querySelector('.card-carousel');
+    const closeCarouselButtonf = document.querySelector('.close-carousel'); // Bouton "Fermer"
+
+    videof.addEventListener('click', () => {
+        cardCarouself.classList.remove('hidden'); // Afficher le modal
+    });
+
+    // Fermer le modal
+    closeCarouselButtonf.addEventListener('click', () => {
+        cardCarouself.classList.add('hidden'); // Masquer le modal
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const videot = document.querySelector('.video-containers2');
+    const cardCarouselt = document.querySelector('.card-carousel2');
+    const closeCarouselButtont = document.querySelector('.close-carousel2'); // Bouton "Fermer"
+
+    videot.addEventListener('click', () => {
+        cardCarouselt.classList.remove('hidden'); // Afficher le modal
+    });
+
+    // Fermer le modal
+    closeCarouselButtont.addEventListener('click', () => {
+        cardCarouselt.classList.add('hidden'); // Masquer le modal
+    });
+});
 
 
-    for (let i= 1; i < 6; i++){
-        document.addEventListener('DOMContentLoaded', function () {
-            if (i=1){
-            const video1 = document.querySelector('.video-containers'+i);
-            const cardCarousel1 = document.querySelector('.card-carousel'+i);
-            const closeCarouselButtons1 = document.querySelectorAll('.close-carousel'+i); // Sélectionne tous les boutons "Fermer"
-       
-            video1.addEventListener('click', () => {
-                
-                        cardCarousel1.classList.toggle('hidden');
-                        video1.classList.add("hidden");
-                        cardCarousel1.classList.toggle('visible');
-                
-                
-                        
-                
-                
-                
-                    });
-                
-                    // Ajoute un événement "click" à chaque bouton "Fermer"
-                    closeCarouselButtons1.forEach(button => {
-                        button.addEventListener('click', () => {
-                            cardCarousel1.classList.add('hidden');
-                            video1.classList.remove("hidden");
-                            cardCarousel1.classList.remove('visible');
-                        });
-                    });
-                    var elem1 = document.getElementById("myvideo1");//FULLSCREEN
-                    elem1.addEventListener("click", ()=>{
-                        if (elem1.requestFullscreen) {
-                        elem1.requestFullscreen();
-                        } else if (elem.mozRequestFullScreen) {
-                        elem1.mozRequestFullScreen();
-                        } else if (elem.webkitRequestFullscreen) {
-                        elem1.webkitRequestFullscreen();
-                        } else if (elem.msRequestFullscreen) { 
-                        elem1.msRequestFullscreen();
-                        }
-                    })
-        }
+document.addEventListener('DOMContentLoaded', function () {
+    const videoq = document.querySelector('.video-containers3');
+    const cardCarouselq = document.querySelector('.card-carousel3');
+    const closeCarouselButtonq = document.querySelector('.close-carousel3'); // Bouton "Fermer"
 
+    videoq.addEventListener('click', () => {
+        cardCarouselq.classList.remove('hidden'); // Afficher le modal
+    });
 
-
-            if (i=2){
-                const video2 = document.querySelector('.video-containers'+i);
-                const cardCarousel2 = document.querySelector('.card-carousel'+i);
-                const closeCarouselButtons2 = document.querySelectorAll('.close-carousel'+i); // Sélectionne tous les boutons "Fermer"
-            
-            
-                video2.addEventListener('click', () => {
-                
-                    cardCarousel2.classList.toggle('hidden');
-                    video2.classList.add("hidden");
-                    cardCarousel2.classList.toggle('visible');
-            
-            
-                    
-            
-            
-            
-                });
-            
-                // Ajoute un événement "click" à chaque bouton "Fermer"
-                closeCarouselButtons2.forEach(button => {
-                    button.addEventListener('click', () => {
-                        cardCarousel2.classList.add('hidden');
-                        video2.classList.remove("hidden");
-                        cardCarousel2.classList.remove('visible');
-                    });
-                });
-            var elem2 = document.getElementById("myvideo2");//FULLSCREEN
-                    elem2.addEventListener("click", ()=>{
-                        if (elem2.requestFullscreen) {
-                        elem2.requestFullscreen();
-                        } else if (elem2.mozRequestFullScreen) {
-                        elem2.mozRequestFullScreen();
-                        } else if (elem2.webkitRequestFullscreen) {
-                        elem2.webkitRequestFullscreen();
-                        } else if (elem2.msRequestFullscreen) { 
-                        elem2.msRequestFullscreen();
-                        }
-                    })
-            }
-
-
-            if (i=3){
-                const video3 = document.querySelector('.video-containers'+i);
-                const cardCarousel3 = document.querySelector('.card-carousel'+i);
-                const closeCarouselButtons3 = document.querySelectorAll('.close-carousel'+i); // Sélectionne tous les boutons "Fermer"
-            
-            
-                video3.addEventListener('click', () => {
-                
-                    cardCarousel3.classList.toggle('hidden');
-                    video3.classList.add("hidden");
-                    cardCarousel3.classList.toggle('visible');
-            
-            
-                    
-            
-            
-            
-                });
-            
-                // Ajoute un événement "click" à chaque bouton "Fermer"
-                closeCarouselButtons3.forEach(button => {
-                    button.addEventListener('click', () => {
-                        cardCarousel3.classList.add('hidden');
-                        video3.classList.remove("hidden");
-                        cardCarousel3.classList.remove('visible');
-                    });
-                });
-            var elem3 = document.getElementById("myvideo"+i);//FULLSCREEN
-                    elem3.addEventListener("click", ()=>{
-                        if (elem3.requestFullscreen) {
-                        elem3.requestFullscreen();
-                        } else if (elem3.mozRequestFullScreen) {
-                        elem3.mozRequestFullScreen();
-                        } else if (elem3.webkitRequestFullscreen) {
-                        elem3.webkitRequestFullscreen();
-                        } else if (elem3.msRequestFullscreen) { 
-                        elem3.msRequestFullscreen();
-                        }
-                    })
-            }
+    // Fermer le modal
+    closeCarouselButtonq.addEventListener('click', () => {
+        cardCarouselq.classList.add('hidden'); // Masquer le modal
+    });
+});
 
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const videoc = document.querySelector('.video-containers4');
+    const cardCarouselc = document.querySelector('.card-carousel4');
+    const closeCarouselButtonc = document.querySelector('.close-carousel4'); // Bouton "Fermer"
 
-            if (i=4){
-                const video4 = document.querySelector('.video-containers'+i);
-                const cardCarousel4 = document.querySelector('.card-carousel'+i);
-                const closeCarouselButtons4 = document.querySelectorAll('.close-carousel'+i); // Sélectionne tous les boutons "Fermer"
-            
-            
-                video4.addEventListener('click', () => {
-                
-                    cardCarousel4.classList.toggle('hidden');
-                    video4.classList.add("hidden");
-                    cardCarousel4.classList.toggle('visible');
-            
-            
-                    
-            
-            
-            
-                });
-            
-                // Ajoute un événement "click" à chaque bouton "Fermer"
-                closeCarouselButtons4.forEach(button => {
-                    button.addEventListener('click', () => {
-                        cardCarousel4.classList.add('hidden');
-                        video4.classList.remove("hidden");
-                        cardCarousel4.classList.remove('visible');
-                    });
-                });
-            var elem4 = document.getElementById("myvideo"+i);//FULLSCREEN
-                    elem4.addEventListener("click", ()=>{
-                        if (elem4.requestFullscreen) {
-                        elem4.requestFullscreen();
-                        } else if (elem4.mozRequestFullScreen) {
-                        elem4.mozRequestFullScreen();
-                        } else if (elem4.webkitRequestFullscreen) {
-                        elem4.webkitRequestFullscreen();
-                        } else if (elem4.msRequestFullscreen) { 
-                        elem4.msRequestFullscreen();
-                        }
-                    })
-            }
+    videoc.addEventListener('click', () => {
+        cardCarouselc.classList.remove('hidden'); // Afficher le modal
+    });
+
+    // Fermer le modal
+    closeCarouselButtonc.addEventListener('click', () => {
+        cardCarouselc.classList.add('hidden'); // Masquer le modal
+    });
+});
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const videol = document.querySelector('.video-containers5');
+    const cardCarousell = document.querySelector('.card-carousel5');
+    const closeCarouselButtonl = document.querySelector('.close-carousel5'); // Bouton "Fermer"
 
+    videol.addEventListener('click', () => {
+        cardCarousell.classList.remove('hidden'); // Afficher le modal
+    });
 
-            if (i=5){
-                const video5 = document.querySelector('.video-containers'+i);
-                const cardCarousel5 = document.querySelector('.card-carousel'+i);
-                const closeCarouselButtons5 = document.querySelectorAll('.close-carousel'+i); // Sélectionne tous les boutons "Fermer"
-            
-            
-                video5.addEventListener('click', () => {
-                
-                    cardCarousel5.classList.toggle('hidden');
-                    video5.classList.add("hidden");
-                    cardCarousel5.classList.toggle('visible');
-            
-            
-                    
-            
-            
-            
-                });
-            
-                // Ajoute un événement "click" à chaque bouton "Fermer"
-                closeCarouselButtons5.forEach(button => {
-                    button.addEventListener('click', () => {
-                        cardCarousel5.classList.add('hidden');
-                        video5.classList.remove("hidden");
-                        cardCarousel5.classList.remove('visible');
-                    });
-                });
-            var elem5 = document.getElementById("myvideo"+i);//FULLSCREEN
-                    elem5.addEventListener("click", ()=>{
-                        if (elem5.requestFullscreen) {
-                        elem5.requestFullscreen();
-                        } else if (elem5.mozRequestFullScreen) {
-                        elem5.mozRequestFullScreen();
-                        } else if (elem5.webkitRequestFullscreen) {
-                        elem5.webkitRequestFullscreen();
-                        } else if (elem5.msRequestFullscreen) { 
-                        elem5.msRequestFullscreen();
-                        }
-                    })
-            }
-
-
-            
-        });  
-    }
-        
-
-
-
-
-
-
-
-  
+    // Fermer le modal
+    closeCarouselButtonl.addEventListener('click', () => {
+        cardCarousell.classList.add('hidden'); // Masquer le modal
+    });
+});

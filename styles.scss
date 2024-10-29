@@ -299,46 +299,148 @@ section.carroussel {
 
 
 .card-carousel {
-  display: flex;
-  overflow-x: auto; /* Permet le défilement horizontal */
-  padding: 20px;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Pour le modal */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrer le modal */
+        background-color: $nav; /* Couleur de fond du modal */
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        &.hidden{
+          display: none;
+        }
+        button{
+          margin-top: 20px;
+          border-radius:15px;
+          border-color:#221248;
+          width: 150px;
+          background:linear-gradient(183deg, rgba(221,71,120,1) 0%, rgba(4,16,121,1) 100%);
+        }
 }
 .card-carousel1 {
-  display: flex;
-  overflow-x: auto; /* Permet le défilement horizontal */
-  padding: 20px;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Pour le modal */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrer le modal */
+        background-color: $nav; /* Couleur de fond du modal */
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        &.hidden{
+          display: none;
+        }
+        button{
+          margin-top: 20px;
+          border-radius:15px;
+          border-color:#221248;
+          width: 150px;
+          background:linear-gradient(183deg, rgba(221,71,120,1) 0%, rgba(4,16,121,1) 100%);
+        }
 }
 .card-carousel2 {
-  display: flex;
-  overflow-x: auto; /* Permet le défilement horizontal */
-  padding: 20px;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Pour le modal */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrer le modal */
+        background-color: $nav; /* Couleur de fond du modal */
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        &.hidden{
+          display: none;
+        }
+        button{
+          margin-top: 20px;
+          border-radius:15px;
+          border-color:#221248;
+          width: 150px;
+          background:linear-gradient(183deg, rgba(221,71,120,1) 0%, rgba(4,16,121,1) 100%);
+        }
 }
 .card-carousel3 {
-  display: flex;
-  overflow-x: auto; /* Permet le défilement horizontal */
-  padding: 20px;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Pour le modal */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrer le modal */
+        background-color: $nav; /* Couleur de fond du modal */
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        &.hidden{
+          display: none;
+        }
+        button{
+          margin-top: 20px;
+          border-radius:15px;
+          border-color:#221248;
+          width: 150px;
+          background:linear-gradient(183deg, rgba(221,71,120,1) 0%, rgba(4,16,121,1) 100%);
+        }
 }
 .card-carousel4 {
-  display: flex;
-  overflow-x: auto; /* Permet le défilement horizontal */
-  padding: 20px;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Pour le modal */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrer le modal */
+        background-color: $nav; /* Couleur de fond du modal */
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        &.hidden{
+          display: none;
+        }
+        button{
+          margin-top: 20px;
+          border-radius:15px;
+          border-color:#221248;
+          width: 150px;
+          background:linear-gradient(183deg, rgba(221,71,120,1) 0%, rgba(4,16,121,1) 100%);
+        }
 }
 .card-carousel5 {
-  display: flex;
-  overflow-x: auto; /* Permet le défilement horizontal */
-  padding: 20px;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Pour le modal */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrer le modal */
+        background-color: $nav; /* Couleur de fond du modal */
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        &.hidden{
+          display: none;
+        }
+        button{
+          margin-top: 20px;
+          border-radius:15px;
+          border-color:#221248;
+          width: 150px;
+          background:linear-gradient(183deg, rgba(221,71,120,1) 0%, rgba(4,16,121,1) 100%);
+        }
 }
 
 
