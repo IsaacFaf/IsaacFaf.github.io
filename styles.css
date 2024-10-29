@@ -1038,16 +1038,31 @@ body {
 }
 .pulsating-text span:nth-child(4) {
   animation: typing 4s steps(50, end) forwards, blink-caret 1s step-end 5;
-  animation-delay: 15s; /* 15s après le troisième span */
+  animation-delay: 13s; /* 15s après le troisième span */
 }
 .pulsating-text span:nth-child(5) {
+  animation: typing 4s steps(50, end) forwards, blink-caret 1s step-end 5;
+  animation-delay: 17.2s; /* 20s après le quatrième span */
+}
+.pulsating-text span:nth-child(6) {
   margin-top: 25px;
   animation: typing 4s steps(50, end) forwards, blink-caret 1s step-end 5;
-  animation-delay: 20s; /* 20s après le quatrième span */
+  animation-delay: 22s; /* 20s après le quatrième span */
+}
+.pulsating-text span:nth-child(7) {
+  animation: typing 4s steps(50, end) forwards, blink-caret 1s step-end 5;
+  animation-delay: 26s; /* 20s après le quatrième span */
 }
 .pulsating-text span:last-child {
   animation: typing 4s steps(50, end) forwards, blink-caret 1s step-end infinite; /* Le curseur ne clignote pas après l'animation */
-  animation-delay: 24s; /* Dernier span avec un délai pour le curseur */
+  animation-delay: 30s; /* Dernier span avec un délai pour le curseur */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+  grid-gap: 20px; /* Espace entre les vidéos */
+  justify-items: center; /* Centrer chaque élément */
 }
 
 /* Effet de lumière pulsante sur le texte */

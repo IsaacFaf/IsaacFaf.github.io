@@ -303,9 +303,14 @@ var elem = document.getElementById("myvideo");//FULLSCREEN
 
 
             
-        });
-        
-        
-        
+        });  
     }
         
+
+
+
+
+
+
+
+  
