@@ -256,6 +256,52 @@ var elem = document.getElementById("myvideo");//FULLSCREEN
                         }
                     })
             }
+
+
+
+
+            if (i=5){
+                const video5 = document.querySelector('.video-containers'+i);
+                const cardCarousel5 = document.querySelector('.card-carousel'+i);
+                const closeCarouselButtons5 = document.querySelectorAll('.close-carousel'+i); // Sélectionne tous les boutons "Fermer"
+            
+            
+                video5.addEventListener('click', () => {
+                
+                    cardCarousel5.classList.toggle('hidden');
+                    video5.classList.add("hidden");
+                    cardCarousel5.classList.toggle('visible');
+            
+            
+                    
+            
+            
+            
+                });
+            
+                // Ajoute un événement "click" à chaque bouton "Fermer"
+                closeCarouselButtons5.forEach(button => {
+                    button.addEventListener('click', () => {
+                        cardCarousel5.classList.add('hidden');
+                        video5.classList.remove("hidden");
+                        cardCarousel5.classList.remove('visible');
+                    });
+                });
+            var elem5 = document.getElementById("myvideo"+i);//FULLSCREEN
+                    elem5.addEventListener("click", ()=>{
+                        if (elem5.requestFullscreen) {
+                        elem5.requestFullscreen();
+                        } else if (elem5.mozRequestFullScreen) {
+                        elem5.mozRequestFullScreen();
+                        } else if (elem5.webkitRequestFullscreen) {
+                        elem5.webkitRequestFullscreen();
+                        } else if (elem5.msRequestFullscreen) { 
+                        elem5.msRequestFullscreen();
+                        }
+                    })
+            }
+
+
             
         });
         

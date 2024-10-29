@@ -499,6 +499,46 @@ section.carroussel .title {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.card-carousel1 {
+  display: flex;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 20px;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-carousel2 {
+  display: flex;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 20px;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-carousel3 {
+  display: flex;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 20px;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-carousel4 {
+  display: flex;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 20px;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-carousel5 {
+  display: flex;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 20px;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .card {
   min-width: 300px; /* Largeur minimale des cartes */
   margin-right: 20px; /* Espace entre les cartes */
