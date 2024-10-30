@@ -70,12 +70,21 @@ header .navbar-nav a {
   padding-bottom: 5px;
 }
 .apercu .video-container {
-  display: flex;
-  max-width: 80%;
-  transition: transform 0.5s ease;
+  height: 50vw;
+  display: flex; /* Permet le défilement horizontal */
+  transition: transform 0.5s ease; /* Animation de transition */
 }
 .apercu .presentation {
-  max-width: 100%;
+  transform: translateX(10vw);
+  height: auto;
+  width: 80%;
+  margin-right: 20vw; /* Chaque vidéo prend toute la largeur du conteneur */
+  display: block; /* S'assurer que les vidéos sont des blocs */
+}
+.apercu .arrows {
+  display: flex; /* Aligner les flèches horizontalement */
+  justify-content: space-between; /* Espacement entre les flèches */
+  margin-top: 10px; /* Espace au-dessus des flèches */
 }
 .apercu .arrow {
   position: absolute;
@@ -96,7 +105,6 @@ header .navbar-nav a {
 }
 
 section.carroussel {
-  background-color: #221248;
   width: 100%;
   padding-top: 5px;
 }

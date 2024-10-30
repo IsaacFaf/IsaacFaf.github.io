@@ -4,42 +4,32 @@ const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 let currentVideoIndex = 0;
 
-// Fonction pour démarrer la vidéo au premier tiers avec une variation aléatoire
 function playOneThirdOfVideo(video) {
     const oneThirdTime = video.duration / 3;
-    const randomOffset = (Math.random() * 14) - 7; // Valeur aléatoire entre -7 et 7 secondes
-    const startTime = Math.min(Math.max(oneThirdTime + randomOffset, 0), video.duration); // Limiter le temps entre 0 et la durée de la vidéo
+    const randomOffset = (Math.random() * 14) - 7;
+    const startTime = Math.min(Math.max(oneThirdTime + randomOffset, 0), video.duration);
     video.currentTime = startTime;
     video.play();
 
-    // Mettre en pause la vidéo après 8 secondes
     setTimeout(() => {
         video.pause();
         currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-        updateVideo(); // Passer à la vidéo suivante
-    }, 8000); // Passe à la vidéo suivante après 8 secondes
+        updateVideo();
+    }, 8000);
 }
 
-
-
-
-
-// Fonction pour mettre à jour la vidéo en cours
 function updateVideo() {
     videoContainer.style.transform = `translateX(-${currentVideoIndex * 100}%)`;
-    
+
     videos.forEach((video, index) => {
         if (index === currentVideoIndex) {
-            
-            playOneThirdOfVideo(video); // Joue la vidéo actuelle
+            playOneThirdOfVideo(video);
         } else {
-            
-            video.pause(); // Met en pause les autres vidéos
+            video.pause();
         }
     });
 }
 
-// Défilement avec les flèches
 rightArrow.addEventListener('click', () => {
     currentVideoIndex = (currentVideoIndex + 1) % videos.length;
     updateVideo();
@@ -50,7 +40,6 @@ leftArrow.addEventListener('click', () => {
     updateVideo();
 });
 
-// Démarrer avec la première vidéo au tiers de sa durée
 videos.forEach((video, index) => {
     video.addEventListener('loadedmetadata', () => {
         if (index === currentVideoIndex) {
@@ -58,6 +47,9 @@ videos.forEach((video, index) => {
         }
     });
 });
+
+// Initialisation de la première vidéo
+updateVideo();
 
 
 

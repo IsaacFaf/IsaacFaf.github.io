@@ -100,15 +100,25 @@ header{
     }
 
     .video-container {
-        display: flex;
-        max-width: 80%;
-        transition: transform 0.5s ease;
-    }
-
-    .presentation {
-        max-width: 100%;
-    }
-
+      
+      height: 50vw;
+      display: flex; /* Permet le défilement horizontal */
+      transition: transform 0.5s ease; /* Animation de transition */
+  }
+  
+  .presentation {
+      transform: translateX(10vw);
+      height: auto;
+      width: 80%;
+      margin-right: 20vw; /* Chaque vidéo prend toute la largeur du conteneur */
+      display: block; /* S'assurer que les vidéos sont des blocs */
+  }
+  
+  .arrows {
+      display: flex; /* Aligner les flèches horizontalement */
+      justify-content: space-between; /* Espacement entre les flèches */
+      margin-top: 10px; /* Espace au-dessus des flèches */
+  }
     .arrow {
         position: absolute;
         top: 50%;
@@ -129,7 +139,8 @@ header{
         right: 10px;
 }}
 section.carroussel {
-  background-color: $bgProjet;
+  
+  
   width: 100%;
   padding-top: 5px;
 
@@ -155,8 +166,10 @@ section.carroussel {
 
 .carroussel {
   position: relative;
+  
 width: 100%;
   .defilement {
+    
       display: flex;
       justify-content: center;
       position: relative;
@@ -203,7 +216,10 @@ width: 100%;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           
         }
+        
         .video-containers#{$i}{
+          
+          
             position: relative;
             width: 100%; 
             
@@ -253,6 +269,7 @@ width: 100%;
 
       .video-containers1{
         max-width: 1095px;
+        
       }
 
 @media screen and (min-width:1245px){
@@ -271,6 +288,7 @@ width: 100%;
 }
       
       .video-containers {
+        
           position: relative;
           width: 100%; 
           padding-top: 20px;
@@ -288,6 +306,7 @@ width: 100%;
               max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
               border-radius: 2px;
               border: 8px solid rgb(10, 1, 37);
+              
               
           }
 
@@ -905,6 +924,7 @@ footer{
 
 
   .grid-container {
+    
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
     grid-template-rows: auto; /* Ajuste les lignes automatiquement */
