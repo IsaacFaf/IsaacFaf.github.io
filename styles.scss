@@ -115,6 +115,7 @@ header{
   }
   
   .arrows {
+    
       display: flex; /* Aligner les flèches horizontalement */
       justify-content: space-between; /* Espacement entre les flèches */
       margin-top: 10px; /* Espace au-dessus des flèches */
@@ -133,10 +134,12 @@ header{
 
     .left-arrow {
         left: 10px;
+        display: none;
     }
 
     .right-arrow {
         right: 10px;
+        display: none;
 }}
 section.carroussel {
   

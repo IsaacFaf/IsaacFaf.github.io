@@ -99,9 +99,11 @@ header .navbar-nav a {
 }
 .apercu .left-arrow {
   left: 10px;
+  display: none;
 }
 .apercu .right-arrow {
   right: 10px;
+  display: none;
 }
 
 section.carroussel {

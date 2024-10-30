@@ -25,10 +25,36 @@
             padding-bottom: 5px;
         
     }
+    li{
+        color: rgb(169, 120, 29);
+    }
+    .content {
+            transform: translateX(0); /* Padding de la gauche pour le contenu */
+            
+            
+        }
+        .software{
+            margin-top: 160px;
+        }
+        .software, .roles {
+            transform: translateX(18%);
+            margin-top: 20px;
+            padding-left: 20px; /* Padding pour les sections spécifiques */
+        }
+        strong {
+            color: #f3ff15; /* Couleur pour le texte en gras */
+        }
     p{
         color: white;
+        width: 80%;
+        padding-left: 20%;
     }
     h2{
+        padding-left: 30%;
+        color: white;
+    }
+    h6{
+        padding-left: 30%;
         color: white;
     }
     </style>
@@ -80,26 +106,45 @@
         </nav>
     </header>
 <body> 
-    <section id="qui-suis-je" >
+    <section id="qui-suis-je">
     
-    <h1 class="title" style="width: 100%;align-items: center;">Qui suis-je</h1>
-        <br>
-        <p style="width: 60%; margin-right: 50%;transform: translateX(35%);padding-bottom: 25px;">
-            Je suis <strong style="color: yellow;">adeptes</strong> des <strong style="color: yellow;">installations interactives</strong>, <strong style="color: yellow;">la réalité virtuelle</strong> et de l'<strong style="color: yellow;">animation 2D</strong>. Bien que j'apprécie la programmation, ce n'est pas là où je m'épanouis le plus. Mon objectif est de m'intégrer dans ces domaines et de faire progresser mon <strong style="color: yellow;">parcours professionnel</strong>. Actuellement étudiant au Collège Montmorency, je recherche un <strong style="color: yellow;">stage en multimédia</strong> et reste <strong style="color: yellow;">ouvert</strong> à des <strong style="color: yellow;">opportunités d'emploi à temps partiel</strong>.
+    <h1 class="title" style="width: 100%;align-items: center;">Projet La ville</h1>
+    <video controls style="max-width: 700px;transform: translate(50%);min-width: 500px;margin-top: 15px;margin-bottom: 55px;">
+        <source src="medias/vrcomp.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas cette vidéo.
+    </video> 
+    <div class="content">
+        <p>
+            Le projet <strong>Le Voyage Temporel</strong> est un projet conçu dans un cadre étudiant. Le concept est un <strong>Escape game</strong> auquel le joueur sera poussé à observer le lieu pour comprendre comment passer de niveau. À chaque niveau, le joueur va attérir dans une <strong>époque différente</strong> que celle précédante jusqu'à l'apocalypse.! Ce projet à été fait en équipe de deux. <strong>Maïka Désy</strong> et moi avons travailler d'arache-pied pour ce résultat
         </p>
-    </section>
-    
-    <section id="mes-connaissances" >
-        <h1 class="title" style="width: 100%;align-items: center; margin-top: 40px;">Mes connaissances</h1>
-        <br>
-        <p style="transform: translate(35%); width: 60%;">
-            J'ai acquis une expérience avec divers logiciels, notamment <strong style="color: goldenrod;">DaVinci Resolve</strong>, <strong style="color: green">Adobe After Effects</strong>, <strong style="color: goldenrod;">Adobe Illustrator</strong>, <strong style="color: red;">Adobe Photoshop</strong>, <strong style="color: rgb(236, 255, 26)">Arduino</strong>, <strong style="color: rgb(20, 196, 14);">TouchDesigner</strong>, <strong style="color: rgb(46, 200, 243);">Maya</strong>, <strong style="color: rgb(62, 77, 142);">Unity</strong></strong>, et je commence à apprendre <strong style="color: yellow;">PlugData</strong> et <strong style="color: yellow;">QLC+</strong>. En ce qui concerne la programmation, je maîtrise plusieurs langages tels que <mark style="background-color: red;">HTML</mark>, <mark style="background-color: rgb(81, 91, 147);">CSS</mark>, <mark style="background-color: rgb(238, 36, 164);">Sass</mark>, <mark style="background-color: rgb(211, 221, 37);">JavaScript</mark>, <mark style="background-color: rgb(58, 11, 130);color: white;">C#</mark> (Unity), <mark style="background-color: rgb(58, 11, 130);color: white;">C++</mark> (Arduino), ainsi que des frameworks comme <mark style="background-color: rgb(70, 37, 120);color: white;">Bootstrap</mark>, <mark style="background-color: rgb(191, 241, 43);">Vite</mark>, <mark style="background-color: rgb(121, 237, 76);">ScrollTrigger</mark> et <mark style="background-color: rgb(121, 237, 76);">GSAP</mark>.
+        
+        <p>
+            Le grand défi consistait à la séparation des tâches. Nous devions rester organisé et structurer pour éviter de corrompre le travail de l'autre. <br>
+            <img src="medias/vrscreen.png" alt=""><br>
+            <br>
+            Notre plan d'organisation consistait à se donner nos scènes respectives du jeu et aussi chacun avait sa scène de test pour faire des tests de code pendant que l'un travail dans les vrais scènes.
+            <br>
+            <br>
+            <img src="medias/vrscreen2.png" alt="">
         </p>
-    </section>
+        <h6>Temps de production : <strong>64 heures</strong></h6>
+    </div>
 
+    <div class="software">
+        <h2 style="padding-left: 20px;">Logiciels Utilisés</h2>
+        <ul>
+            <li>Unity</li>
+            <li>Maya</li>
+            <li>Visual Studio Code</li>
+        </ul>
+    </div>
 
-
-
+    <div class="roles">
+        <h2 style="padding-left: 20px;">Mon Rôle</h2>
+        <p>
+             <ul><li>Modeleur 3D</li><li>Script/Développeur</li><li>Création de l'espace</li></ul>
+        </p>
+    </div></section>
     <footer>
         <section class="bottom">
             
