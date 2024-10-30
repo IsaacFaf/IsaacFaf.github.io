@@ -20,14 +20,20 @@ function playOneThirdOfVideo(video) {
     }, 8000); // Passe à la vidéo suivante après 8 secondes
 }
 
+
+
+
+
 // Fonction pour mettre à jour la vidéo en cours
 function updateVideo() {
     videoContainer.style.transform = `translateX(-${currentVideoIndex * 100}%)`;
-
+    
     videos.forEach((video, index) => {
         if (index === currentVideoIndex) {
+            
             playOneThirdOfVideo(video); // Joue la vidéo actuelle
         } else {
+            
             video.pause(); // Met en pause les autres vidéos
         }
     });
@@ -153,3 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
         cardCarousell.classList.add('hidden'); // Masquer le modal
     });
 });
+
+
+
+//EFFET BUTTON

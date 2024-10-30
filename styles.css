@@ -33,6 +33,10 @@ header .navbar-nav .nav-link:hover:before {
 }
 header .navbar-brand {
   color: white;
+  font-family: "Brush Script MT", cursive;
+  font-size: 40px; /* Ajustez la taille à votre convenance */
+  color: white; /* Personnalisez la couleur */
+  margin-left: 45px;
 }
 header .navbar-nav a {
   color: white;
@@ -67,10 +71,11 @@ header .navbar-nav a {
 }
 .apercu .video-container {
   display: flex;
+  max-width: 80%;
   transition: transform 0.5s ease;
 }
 .apercu .presentation {
-  min-width: 100%;
+  max-width: 100%;
 }
 .apercu .arrow {
   position: absolute;
@@ -514,6 +519,7 @@ section.carroussel .title {
 .card-carousel {
   position: fixed; /* Pour le modal */
   top: 50%;
+  max-height: 100%;
   left: 50%;
   overflow: hidden;
   box-sizing: border-box;
@@ -529,10 +535,16 @@ section.carroussel .title {
   align-items: center;
   border-radius: 8px;
 }
+.card-carousel a {
+  height: 20px;
+  position: block;
+  text-decoration: none;
+  animation: aButton infinite 3s forwards;
+}
 .card-carousel.hidden {
   display: none;
 }
-.card-carousel button {
+.card-carousel #v {
   margin-top: 20px;
   border-radius: 15px;
   border-color: #221248;
@@ -540,6 +552,22 @@ section.carroussel .title {
   background: linear-gradient(183deg, rgb(221, 71, 120) 0%, rgb(4, 16, 121) 100%);
 }
 
+@keyframes aButton {
+  0% {
+    transform: scale(100%);
+    color: rgb(207, 203, 203);
+  }
+  50% {
+    font-size: 20px;
+    color: whitesmoke;
+    transform: translateX(-15px);
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: scale(100%);
+    color: rgb(207, 203, 203);
+  }
+}
 .card-carousel1 {
   position: fixed; /* Pour le modal */
   top: 50%;
@@ -555,6 +583,12 @@ section.carroussel .title {
   flex-direction: column;
   align-items: center;
   border-radius: 8px;
+}
+.card-carousel1 a {
+  height: 20px;
+  position: block;
+  text-decoration: none;
+  animation: aButton infinite 3s forwards;
 }
 .card-carousel1.hidden {
   display: none;
@@ -583,6 +617,12 @@ section.carroussel .title {
   align-items: center;
   border-radius: 8px;
 }
+.card-carousel2 a {
+  height: 20px;
+  position: block;
+  text-decoration: none;
+  animation: aButton infinite 3s forwards;
+}
 .card-carousel2.hidden {
   display: none;
 }
@@ -609,6 +649,12 @@ section.carroussel .title {
   flex-direction: column;
   align-items: center;
   border-radius: 8px;
+}
+.card-carousel3 a {
+  height: 20px;
+  position: block;
+  text-decoration: none;
+  animation: aButton infinite 3s forwards;
 }
 .card-carousel3.hidden {
   display: none;
@@ -637,6 +683,12 @@ section.carroussel .title {
   align-items: center;
   border-radius: 8px;
 }
+.card-carousel4 a {
+  height: 20px;
+  position: block;
+  text-decoration: none;
+  animation: aButton infinite 3s forwards;
+}
 .card-carousel4.hidden {
   display: none;
 }
@@ -663,6 +715,12 @@ section.carroussel .title {
   flex-direction: column;
   align-items: center;
   border-radius: 8px;
+}
+.card-carousel5 a {
+  height: 20px;
+  position: block;
+  text-decoration: none;
+  animation: aButton infinite 3s forwards;
 }
 .card-carousel5.hidden {
   display: none;
@@ -1330,4 +1388,17 @@ body {
 
 .modal-content button:hover {
   background-color: #45a049;
+}
+
+.logofooter {
+  font-family: "Brush Script MT", cursive;
+  font-size: 50px; /* Ajustez la taille à votre convenance */
+  color: white; /* Personnalisez la couleur */
+}
+.logofooter a {
+  text-decoration: none;
+  color: white;
+}
+.logofooter a:hover {
+  color: black;
 }/*# sourceMappingURL=styles.css.map */

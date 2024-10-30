@@ -53,12 +53,14 @@ header{
 
 
 
-
-
     background-color: $nav;
     
     .navbar-brand{
         color: white;
+        font-family: 'Brush Script MT', cursive;
+        font-size: 40px; /* Ajustez la taille à votre convenance */
+        color: white; /* Personnalisez la couleur */
+        margin-left: 45px;
     }
     .navbar-nav{ 
         a{
@@ -99,11 +101,12 @@ header{
 
     .video-container {
         display: flex;
+        max-width: 80%;
         transition: transform 0.5s ease;
     }
 
     .presentation {
-        min-width: 100%;
+        max-width: 100%;
     }
 
     .arrow {
@@ -198,6 +201,7 @@ width: 100%;
           padding: 20px;
           justify-content: center;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          
         }
         .video-containers#{$i}{
             position: relative;
@@ -317,6 +321,7 @@ width: 100%;
 .card-carousel {
   position: fixed; /* Pour le modal */
         top: 50%;
+        max-height: 100%;
         left: 50%;
         overflow: hidden;
         box-sizing: border-box;
@@ -331,10 +336,17 @@ width: 100%;
         flex-direction: column;
         align-items: center;
         border-radius: 8px;
+        a{
+          height: 20px;
+          position: block;
+          text-decoration: none;
+          animation: aButton infinite 3s forwards;
+          
+        }
         &.hidden{
           display: none;
         }
-        button{
+        #v{
           margin-top: 20px;
           border-radius:15px;
           border-color:#221248;
@@ -342,6 +354,23 @@ width: 100%;
           background:linear-gradient(183deg, rgba(221,71,120,1) 0%, rgba(4,16,121,1) 100%);
         }
 }
+@keyframes aButton{
+  0%{transform: scale(100%);
+  color:rgb(207, 203, 203);
+  
+}
+  50%{
+    font-size: 20px;
+    color: whitesmoke;
+    transform: translateX(-15px);
+    transform: translateY(-3px);
+    
+  }
+  100%{transform: scale(100%);
+    color:rgb(207, 203, 203);
+    
+    
+}}
 .card-carousel1 {
   position: fixed; /* Pour le modal */
         top: 50%;
@@ -357,6 +386,13 @@ width: 100%;
         flex-direction: column;
         align-items: center;
         border-radius: 8px;
+        a{
+          height: 20px;
+          position: block;
+          text-decoration: none;
+          animation: aButton infinite 3s forwards;
+          
+        }
         &.hidden{
           display: none;
         }
@@ -383,6 +419,13 @@ width: 100%;
         flex-direction: column;
         align-items: center;
         border-radius: 8px;
+        a{
+          height: 20px;
+          position: block;
+          text-decoration: none;
+          animation: aButton infinite 3s forwards;
+          
+        }
         &.hidden{
           display: none;
         }
@@ -409,6 +452,13 @@ width: 100%;
         flex-direction: column;
         align-items: center;
         border-radius: 8px;
+        a{
+          height: 20px;
+          position: block;
+          text-decoration: none;
+          animation: aButton infinite 3s forwards;
+          
+        }
         &.hidden{
           display: none;
         }
@@ -435,6 +485,13 @@ width: 100%;
         flex-direction: column;
         align-items: center;
         border-radius: 8px;
+        a{
+          height: 20px;
+          position: block;
+          text-decoration: none;
+          animation: aButton infinite 3s forwards;
+          
+        }
         &.hidden{
           display: none;
         }
@@ -461,6 +518,13 @@ width: 100%;
         flex-direction: column;
         align-items: center;
         border-radius: 8px;
+        a{
+          height: 20px;
+          position: block;
+          text-decoration: none;
+          animation: aButton infinite 3s forwards;
+          
+        }
         &.hidden{
           display: none;
         }
@@ -991,4 +1055,16 @@ footer{
 
   .modal-content button:hover {
     background-color: #45a049;
+  }
+  .logofooter{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 50px; /* Ajustez la taille à votre convenance */
+    color: white; /* Personnalisez la couleur */
+    a{
+      text-decoration: none;
+      color: white;
+      &:hover{
+        color: black;
+      }
+    }
   }
