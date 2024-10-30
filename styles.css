@@ -109,6 +109,7 @@ section.carroussel .title {
 
 .carroussel {
   position: relative;
+  width: 100%;
 }
 .carroussel .defilement {
   display: flex;
@@ -452,10 +453,28 @@ section.carroussel .title {
 .carroussel .defilement .video-containers5:hover .overlay {
   opacity: 1;
 }
+.carroussel .defilement .video-containers1 {
+  max-width: 1095px;
+}
+@media screen and (min-width: 1245px) {
+  .carroussel .defilement .video-containers2 {
+    margin-left: 12.25vw;
+  }
+  .carroussel .defilement .video-containers3 {
+    margin-right: 12.25vw;
+  }
+  .carroussel .defilement .video-containers4 {
+    margin-left: 12.25vw;
+  }
+  .carroussel .defilement .video-containers5 {
+    margin-right: 12.25vw;
+  }
+}
 .carroussel .defilement .video-containers {
   position: relative;
   width: 100%;
-  max-width: 500px; /* Limite la largeur */
+  padding-top: 20px;
+  max-width: 1095px; /* Limite la largeur */
   margin: 0 auto; /* Centre le conteneur */
   display: flex; /* Utilisation de Flexbox pour le centrage */
   justify-content: center; /* Centre horizontalement */
@@ -471,6 +490,7 @@ section.carroussel .title {
   border: 8px solid rgb(10, 1, 37);
 }
 .carroussel .defilement .video-containers .overlay {
+  margin-top: 20px;
   content: "";
   position: absolute;
   top: 0;
@@ -495,9 +515,13 @@ section.carroussel .title {
   position: fixed; /* Pour le modal */
   top: 50%;
   left: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
   transform: translate(-50%, -50%); /* Centrer le modal */
   background-color: #474556; /* Couleur de fond du modal */
-  padding: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
   display: flex;
@@ -522,7 +546,9 @@ section.carroussel .title {
   left: 50%;
   transform: translate(-50%, -50%); /* Centrer le modal */
   background-color: #474556; /* Couleur de fond du modal */
-  padding: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
   display: flex;
@@ -547,7 +573,9 @@ section.carroussel .title {
   left: 50%;
   transform: translate(-50%, -50%); /* Centrer le modal */
   background-color: #474556; /* Couleur de fond du modal */
-  padding: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
   display: flex;
@@ -572,7 +600,9 @@ section.carroussel .title {
   left: 50%;
   transform: translate(-50%, -50%); /* Centrer le modal */
   background-color: #474556; /* Couleur de fond du modal */
-  padding: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
   display: flex;
@@ -597,7 +627,9 @@ section.carroussel .title {
   left: 50%;
   transform: translate(-50%, -50%); /* Centrer le modal */
   background-color: #474556; /* Couleur de fond du modal */
-  padding: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
   display: flex;
@@ -622,7 +654,9 @@ section.carroussel .title {
   left: 50%;
   transform: translate(-50%, -50%); /* Centrer le modal */
   background-color: #474556; /* Couleur de fond du modal */
-  padding: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Assure que le modal est au-dessus des autres éléments */
   display: flex;
@@ -673,6 +707,7 @@ section.carroussel .title {
 }
 
 footer {
+  margin-top: 50px;
   background-color: #56586C;
 }
 footer section {
@@ -1163,8 +1198,34 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
-  grid-gap: 20px; /* Espace entre les vidéos */
-  justify-items: center; /* Centrer chaque élément */
+  grid-template-rows: auto; /* Ajuste les lignes automatiquement */
+  grid-template-areas: "no1 no1" "no2 no2" "no3 no4" "no5 no6";
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.carroussel:nth-child(1) {
+  grid-area: no1;
+}
+
+.carroussel:nth-child(2) {
+  grid-area: no2;
+}
+
+.carroussel:nth-child(3) {
+  grid-area: no3;
+}
+
+.carroussel:nth-child(4) {
+  grid-area: no4;
+}
+
+.carroussel:nth-child(5) {
+  grid-area: no5;
+}
+
+.carroussel:nth-child(6) {
+  grid-area: no6;
 }
 
 /* Effet de lumière pulsante sur le texte */

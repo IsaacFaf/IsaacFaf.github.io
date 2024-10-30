@@ -4,36 +4,52 @@ const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 let currentVideoIndex = 0;
 
+// Fonction pour démarrer la vidéo au premier tiers avec une variation aléatoire
+function playOneThirdOfVideo(video) {
+    const oneThirdTime = video.duration / 3;
+    const randomOffset = (Math.random() * 14) - 7; // Valeur aléatoire entre -7 et 7 secondes
+    const startTime = Math.min(Math.max(oneThirdTime + randomOffset, 0), video.duration); // Limiter le temps entre 0 et la durée de la vidéo
+    video.currentTime = startTime;
+    video.play();
+
+    // Mettre en pause la vidéo après 8 secondes
+    setTimeout(() => {
+        video.pause();
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+        updateVideo(); // Passer à la vidéo suivante
+    }, 8000); // Passe à la vidéo suivante après 8 secondes
+}
+
+// Fonction pour mettre à jour la vidéo en cours
 function updateVideo() {
     videoContainer.style.transform = `translateX(-${currentVideoIndex * 100}%)`;
-    
-    // play
+
     videos.forEach((video, index) => {
         if (index === currentVideoIndex) {
-            video.play(); // Joue la vidéo
+            playOneThirdOfVideo(video); // Joue la vidéo actuelle
         } else {
-            video.pause(); // Pause la vidéo si défilement
+            video.pause(); // Met en pause les autres vidéos
         }
     });
 }
 
-// fleche droite
+// Défilement avec les flèches
 rightArrow.addEventListener('click', () => {
     currentVideoIndex = (currentVideoIndex + 1) % videos.length;
     updateVideo();
 });
 
-// fleche gauche
 leftArrow.addEventListener('click', () => {
     currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
     updateVideo();
 });
 
-// Défilement automatique entre les vidéos
+// Démarrer avec la première vidéo au tiers de sa durée
 videos.forEach((video, index) => {
-    video.addEventListener('ended', () => {
-        currentVideoIndex = (index + 1) % videos.length;
-        updateVideo();
+    video.addEventListener('loadedmetadata', () => {
+        if (index === currentVideoIndex) {
+            playOneThirdOfVideo(video);
+        }
     });
 });
 
