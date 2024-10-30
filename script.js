@@ -5,17 +5,34 @@ const rightArrow = document.querySelector('.right-arrow');
 let currentVideoIndex = 0;
 
 function playOneThirdOfVideo(video) {
-    const oneThirdTime = video.duration / 3;
-    const randomOffset = (Math.random() * 14) - 7;
-    const startTime = Math.min(Math.max(oneThirdTime + randomOffset, 0), video.duration);
-    video.currentTime = startTime;
-    video.play();
+    // Vérifiez que la durée de la vidéo est valide avant de procéder
+    if (video.duration > 0) {
+        const oneThirdTime = video.duration / 3;
+        const randomOffset = (Math.random() * 14) - 7;
+        const startTime = Math.min(Math.max(oneThirdTime + randomOffset, 0), video.duration);
 
-    setTimeout(() => {
-        video.pause();
-        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-        updateVideo();
-    }, 8000);
+        // Log des valeurs pour le débogage
+        console.log("Duration:", video.duration);
+        console.log("One Third Time:", oneThirdTime);
+        console.log("Random Offset:", randomOffset);
+        console.log("Start Time:", startTime);
+
+        // Vérifiez que startTime est un nombre valide avant de le définir
+        if (isFinite(startTime)) {
+            video.currentTime = startTime;
+            video.play();
+
+            setTimeout(() => {
+                video.pause();
+                currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+                updateVideo();
+            }, 8000);
+        } else {
+            console.error("startTime is not a finite number:", startTime);
+        }
+    } else {
+        console.error("Video duration is invalid:", video.duration);
+    }
 }
 
 function updateVideo() {
@@ -40,6 +57,7 @@ leftArrow.addEventListener('click', () => {
     updateVideo();
 });
 
+// Initialisation de la première vidéo
 videos.forEach((video, index) => {
     video.addEventListener('loadedmetadata', () => {
         if (index === currentVideoIndex) {
@@ -52,9 +70,10 @@ videos.forEach((video, index) => {
 updateVideo();
 
 
+console.log("ce rend la");
 
 
-  console.log("ce rend la");
+  
     
   document.addEventListener('DOMContentLoaded', function () {// VR
     const video = document.querySelector('.video-containers1');
