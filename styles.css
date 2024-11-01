@@ -180,6 +180,11 @@ section.carroussel .title {
   border-radius: 2px;
   border: 8px solid rgb(10, 1, 37);
 }
+.carroussel .defilement .video-containers1 iframe {
+  max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
+  border-radius: 2px;
+  border: 8px solid rgb(10, 1, 37);
+}
 .carroussel .defilement .video-containers1 .overlay {
   content: "";
   position: absolute;
@@ -243,6 +248,11 @@ section.carroussel .title {
   display: none;
 }
 .carroussel .defilement .video-containers2 video {
+  max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
+  border-radius: 2px;
+  border: 8px solid rgb(10, 1, 37);
+}
+.carroussel .defilement .video-containers2 iframe {
   max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
   border-radius: 2px;
   border: 8px solid rgb(10, 1, 37);
@@ -314,6 +324,11 @@ section.carroussel .title {
   border-radius: 2px;
   border: 8px solid rgb(10, 1, 37);
 }
+.carroussel .defilement .video-containers3 iframe {
+  max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
+  border-radius: 2px;
+  border: 8px solid rgb(10, 1, 37);
+}
 .carroussel .defilement .video-containers3 .overlay {
   content: "";
   position: absolute;
@@ -377,6 +392,11 @@ section.carroussel .title {
   display: none;
 }
 .carroussel .defilement .video-containers4 video {
+  max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
+  border-radius: 2px;
+  border: 8px solid rgb(10, 1, 37);
+}
+.carroussel .defilement .video-containers4 iframe {
   max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
   border-radius: 2px;
   border: 8px solid rgb(10, 1, 37);
@@ -448,6 +468,11 @@ section.carroussel .title {
   border-radius: 2px;
   border: 8px solid rgb(10, 1, 37);
 }
+.carroussel .defilement .video-containers5 iframe {
+  max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
+  border-radius: 2px;
+  border: 8px solid rgb(10, 1, 37);
+}
 .carroussel .defilement .video-containers5 .overlay {
   content: "";
   position: absolute;
@@ -500,6 +525,11 @@ section.carroussel .title {
   display: none;
 }
 .carroussel .defilement .video-containers video {
+  max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
+  border-radius: 2px;
+  border: 8px solid rgb(10, 1, 37);
+}
+.carroussel .defilement .video-containers iframe {
   max-width: 90%; /* S'assure que la vidéo est légèrement plus petite pour le centrage */
   border-radius: 2px;
   border: 8px solid rgb(10, 1, 37);
@@ -1261,6 +1291,12 @@ body {
 .pulsating-text span:last-child {
   animation: typing 4s steps(50, end) forwards, blink-caret 1s step-end infinite; /* Le curseur ne clignote pas après l'animation */
   animation-delay: 30s; /* Dernier span avec un délai pour le curseur */
+}
+
+.no1 {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
 }
 
 .grid-container {
