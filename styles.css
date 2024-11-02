@@ -147,6 +147,9 @@ section.carroussel .title {
 .carroussel .defilement .card1 video {
   align-self: center;
 }
+.carroussel .defilement .card1 iframe {
+  align-self: center;
+}
 .carroussel .defilement .card1 button {
   border-radius: 15px;
   border-color: #221248;
@@ -217,6 +220,9 @@ section.carroussel .title {
   align-self: center;
 }
 .carroussel .defilement .card2 video {
+  align-self: center;
+}
+.carroussel .defilement .card2 iframe {
   align-self: center;
 }
 .carroussel .defilement .card2 button {
@@ -291,6 +297,9 @@ section.carroussel .title {
 .carroussel .defilement .card3 video {
   align-self: center;
 }
+.carroussel .defilement .card3 iframe {
+  align-self: center;
+}
 .carroussel .defilement .card3 button {
   border-radius: 15px;
   border-color: #221248;
@@ -363,6 +372,9 @@ section.carroussel .title {
 .carroussel .defilement .card4 video {
   align-self: center;
 }
+.carroussel .defilement .card4 iframe {
+  align-self: center;
+}
 .carroussel .defilement .card4 button {
   border-radius: 15px;
   border-color: #221248;
@@ -433,6 +445,9 @@ section.carroussel .title {
   align-self: center;
 }
 .carroussel .defilement .card5 video {
+  align-self: center;
+}
+.carroussel .defilement .card5 iframe {
   align-self: center;
 }
 .carroussel .defilement .card5 button {
@@ -785,6 +800,9 @@ section.carroussel .title {
   align-self: center;
 }
 .card video {
+  align-self: center;
+}
+.card iframe {
   align-self: center;
 }
 .card button {
