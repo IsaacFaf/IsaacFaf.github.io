@@ -45,10 +45,11 @@ header .navbar-nav a {
 .presente {
   width: 100%;
   height: auto;
-  background-color: grey;
+  background-color: grey; /* Couleur de fond pour le conteneur */
 }
-.presente video {
-  background-color: black;
+.presente iframe {
+  background-color: black; /* Le fond noir pour les vidéos */
+  border: none; /* Retirer les bordures par défaut */
 }
 
 .apercu {
@@ -57,7 +58,7 @@ header .navbar-nav a {
 }
 .apercu .accueil-presentation {
   position: relative;
-  overflow: hidden; /* Pour cacher les vidéos en dehors du conteneur */
+  overflow: hidden; /* Pour cacher les vidéos qui débordent */
 }
 .apercu .title {
   color: white;
@@ -70,27 +71,56 @@ header .navbar-nav a {
   padding-bottom: 5px;
 }
 .apercu .video-container {
-  height: 50vw;
+  height: 78.5vh; /* Hauteur proportionnelle à la largeur de la fenêtre */
   display: flex; /* Permet le défilement horizontal */
   transition: transform 0.5s ease; /* Animation de transition */
+  width: 260vw; /* S'assurer que le conteneur occupe toute la largeur */
 }
 .apercu .presentation {
-  transform: translateX(10vw);
+  height: auto; /* Hauteur automatique pour respecter les proportions de la vidéo */
+  width: 100%; /* La vidéo prend toute la largeur du conteneur */
+  margin-right: 20vw; /* Ajustez cet espace selon vos besoins */
+}
+.apercu .presentation {
+  margin-top: 5px;
+  margin-bottom: 2px;
+  transform: translateX(16vw);
   height: auto;
-  width: 80%;
-  margin-right: 20vw; /* Chaque vidéo prend toute la largeur du conteneur */
-  display: block; /* S'assurer que les vidéos sont des blocs */
+  width: 100%; /* Chaque iframe prend toute la largeur */
+  margin-right: 20vw; /* Espace entre les vidéos */
+  display: block; /* Les iframes doivent se comporter comme des blocs */
+  animation: fade 24s infinite linear;
+}
+@keyframes fade {
+  0% {
+    transform: translateX(16vw);
+  }
+  33% {
+    transform: translateX(16vw);
+  }
+  34% {
+    transform: translateX(-70vw);
+  }
+  65% {
+    transform: translateX(-70vw);
+  }
+  66% {
+    transform: translateX(-157vw);
+  }
+  100% {
+    transform: translateX(-157vw);
+  }
 }
 .apercu .arrows {
-  display: flex; /* Aligner les flèches horizontalement */
-  justify-content: space-between; /* Espacement entre les flèches */
+  display: flex; /* Aligner les flèches */
+  justify-content: space-between; /* Espacement entre flèches */
   margin-top: 10px; /* Espace au-dessus des flèches */
 }
 .apercu .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0); /* Fond transparent */
   border: none;
   font-size: 24px;
   cursor: pointer;
@@ -99,11 +129,11 @@ header .navbar-nav a {
 }
 .apercu .left-arrow {
   left: 10px;
-  display: none;
+  display: none; /* Ajustez cela selon vos besoins */
 }
 .apercu .right-arrow {
   right: 10px;
-  display: none;
+  display: none; /* Ajustez cela selon vos besoins */
 }
 
 section.carroussel {

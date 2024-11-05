@@ -68,79 +68,108 @@ header{
         }
     }}
 
-.presente{
-    width: 100%;
-    height: auto;
-    video{
-        background-color: black;
+    .presente {
+      width: 100%;
+      height: auto;
+  
+      iframe {
+          background-color: black; /* Le fond noir pour les vidéos */
+          border: none; /* Retirer les bordures par défaut */
+      }
+  
+      background-color: grey; /* Couleur de fond pour le conteneur */
+  }
+  
+  .apercu {
+      padding-top: 3vw;
+      background-color: $bgProjet;
+  
+      .accueil-presentation {
+          position: relative;
+          overflow: hidden; /* Pour cacher les vidéos qui débordent */
+      }
+  
+      .title {
+          color: white;
+          background-color: $titleProjet;
+          width: 100%;
+          text-align: center;
+          margin-top: 15px;
+          box-shadow: 2px 2.5px 5px 2px rgb(0 0 0 / .8);
+          padding-top: 3px;
+          padding-bottom: 5px;
+      }
+  
+      .video-container {
+        height: 78.5vh; /* Hauteur proportionnelle à la largeur de la fenêtre */
+        display: flex; /* Permet le défilement horizontal */
+        transition: transform 0.5s ease; /* Animation de transition */
+        width: 260vw; /* S'assurer que le conteneur occupe toute la largeur */
     }
-    background-color: grey;
-}
-
-
-
-
-.apercu{
-    padding-top: 3vw;
-    background-color: $bgProjet;
-    .accueil-presentation {
-        position: relative;
-        overflow: hidden; /* Pour cacher les vidéos en dehors du conteneur */
+    
+    .presentation {
+        height: auto; /* Hauteur automatique pour respecter les proportions de la vidéo */
+        width: 100%; /* La vidéo prend toute la largeur du conteneur */
+        margin-right: 20vw; /* Ajustez cet espace selon vos besoins */
     }
-    .title{
-        color: white;
-        background-color: $titleProjet;
-        width: 100%;
-        text-align: center;
-        margin-top: 15px;
-        box-shadow: 2px 2.5px 5px 2px rgb(0 0 0 / .8);
-        padding-top: 3px;
-        padding-bottom: 5px;
+    
+  
+      .presentation {
+        
+        margin-top: 5px;
+        margin-bottom: 2px;
+        transform: translateX(16vw);
+        height: auto;
+        width: 100%; /* Chaque iframe prend toute la largeur */
+        margin-right: 20vw; /* Espace entre les vidéos */
+        display: block; /* Les iframes doivent se comporter comme des blocs */
+        animation: fade 24s infinite linear;
+      }
+    
+    @keyframes fade {
+        0% { transform: translateX(16vw) }
+        33%{ transform: translateX(16vw);}
+        34% { transform: translateX(-70vw); }
+        65% {transform: translateX(-70vw);}
+        66%{transform: translateX(-157vw);}
+        100%{transform: translateX(-157vw);}
+        
         
     }
 
-    .video-container {
-      
-      height: 50vw;
-      display: flex; /* Permet le défilement horizontal */
-      transition: transform 0.5s ease; /* Animation de transition */
+
+
+
+
+      .arrows {
+          display: flex; /* Aligner les flèches */
+          justify-content: space-between; /* Espacement entre flèches */
+          margin-top: 10px; /* Espace au-dessus des flèches */
+      }
+  
+      .arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(255, 255, 255, 0); /* Fond transparent */
+          border: none;
+          font-size: 24px;
+          cursor: pointer;
+          padding: 10px;
+          z-index: 10;
+      }
+  
+      .left-arrow {
+          left: 10px;
+          display: none; /* Ajustez cela selon vos besoins */
+      }
+  
+      .right-arrow {
+          right: 10px;
+          display: none; /* Ajustez cela selon vos besoins */
+      }
   }
   
-  .presentation {
-      transform: translateX(10vw);
-      height: auto;
-      width: 80%;
-      margin-right: 20vw; /* Chaque vidéo prend toute la largeur du conteneur */
-      display: block; /* S'assurer que les vidéos sont des blocs */
-  }
-  
-  .arrows {
-    
-      display: flex; /* Aligner les flèches horizontalement */
-      justify-content: space-between; /* Espacement entre les flèches */
-      margin-top: 10px; /* Espace au-dessus des flèches */
-  }
-    .arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(255, 255, 255, 0);//RENDRE LE FOND INVISIBLE :)
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        padding: 10px;
-        z-index: 10;
-    }
-
-    .left-arrow {
-        left: 10px;
-        display: none;
-    }
-
-    .right-arrow {
-        right: 10px;
-        display: none;
-}}
 section.carroussel {
   
   
