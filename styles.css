@@ -1606,4 +1606,10 @@ body {
     opacity: 1;
     transform: scale(1.2);
   }
+}
+.knowledge-code img {
+  background-color: rgba(117, 114, 114, 0.25);
+  width: 10%;
+  height: auto;
+  padding: 20px;
 }/*# sourceMappingURL=styles.css.map */
