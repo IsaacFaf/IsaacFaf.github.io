@@ -104,16 +104,16 @@ header .navbar-nav a {
       transform: translateX(16vw);
     }
     34% {
-      transform: translateX(-72vw);
+      transform: translateX(-75vw);
     }
     65% {
-      transform: translateX(-72vw);
+      transform: translateX(-75vw);
     }
     66% {
-      transform: translateX(-160vw);
+      transform: translateX(-170vw);
     }
     100% {
-      transform: translateX(-160vw);
+      transform: translateX(-170vw);
     }
   }
   .apercu .arrows {
