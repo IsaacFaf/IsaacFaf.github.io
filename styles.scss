@@ -223,7 +223,7 @@ header{
       transform: translateX(16vw);
       height: auto;
       width: 100%; /* Chaque iframe prend toute la largeur */
-      margin-right: 20vw; /* Espace entre les vidéos */
+      margin-right: 25vw; /* Espace entre les vidéos */
       display: block; /* Les iframes doivent se comporter comme des blocs */
       animation: fade 24s infinite linear;
     }
@@ -231,8 +231,8 @@ header{
   @keyframes fade {
       0% { transform: translateX(16vw); }
       33%{ transform: translateX(16vw);}
-      34% { transform: translateX(-73vw); }
-      65% {transform: translateX(-73vw);}
+      34% { transform: translateX(-68vw); }
+      65% {transform: translateX(-68vw);}
       66%{transform: translateX(-160vw);}
       100%{transform: translateX(-160vw);}
       
