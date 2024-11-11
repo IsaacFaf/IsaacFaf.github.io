@@ -52,90 +52,263 @@ header .navbar-nav a {
   border: none; /* Retirer les bordures par défaut */
 }
 
-.apercu {
-  padding-top: 3vw;
-  background-color: #221248;
-}
-.apercu .accueil-presentation {
-  position: relative;
-  overflow: hidden; /* Pour cacher les vidéos qui débordent */
-}
-.apercu .title {
-  color: white;
-  background-color: #3A2380;
-  width: 100%;
-  text-align: center;
-  margin-top: 15px;
-  box-shadow: 2px 2.5px 5px 2px rgba(0, 0, 0, 0.8);
-  padding-top: 3px;
-  padding-bottom: 5px;
-}
-.apercu .video-container {
-  height: 78.5vh; /* Hauteur proportionnelle à la largeur de la fenêtre */
-  display: flex; /* Permet le défilement horizontal */
-  transition: transform 0.5s ease; /* Animation de transition */
-  width: 260vw; /* S'assurer que le conteneur occupe toute la largeur */
-}
-.apercu .presentation {
-  height: auto; /* Hauteur automatique pour respecter les proportions de la vidéo */
-  width: 100%; /* La vidéo prend toute la largeur du conteneur */
-  margin-right: 20vw; /* Ajustez cet espace selon vos besoins */
-}
-.apercu .presentation {
-  margin-top: 5px;
-  margin-bottom: 2px;
-  transform: translateX(16vw);
-  height: auto;
-  width: 100%; /* Chaque iframe prend toute la largeur */
-  margin-right: 20vw; /* Espace entre les vidéos */
-  display: block; /* Les iframes doivent se comporter comme des blocs */
-  animation: fade 24s infinite linear;
-}
-@keyframes fade {
-  0% {
+@media screen and (min-width: 1051px) {
+  .apercu {
+    padding-top: 3vw;
+    background-color: #221248;
+  }
+  .apercu .accueil-presentation {
+    position: relative;
+    overflow: hidden; /* Pour cacher les vidéos qui débordent */
+  }
+  .apercu .title {
+    color: white;
+    background-color: #3A2380;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    box-shadow: 2px 2.5px 5px 2px rgba(0, 0, 0, 0.8);
+    padding-top: 3px;
+    padding-bottom: 5px;
+  }
+  .apercu .video-container {
+    height: 78.5vh; /* Hauteur proportionnelle à la largeur de la fenêtre */
+    display: flex; /* Permet le défilement horizontal */
+    transition: transform 0.5s ease; /* Animation de transition */
+    width: 260vw; /* S'assurer que le conteneur occupe toute la largeur */
+  }
+  .apercu .presentation {
+    height: auto; /* Hauteur automatique pour respecter les proportions de la vidéo */
+    width: 100%; /* La vidéo prend toute la largeur du conteneur */
+    margin-right: 20vw; /* Ajustez cet espace selon vos besoins */
+  }
+  .apercu .presentation {
+    margin-top: 5px;
+    margin-bottom: 2px;
     transform: translateX(16vw);
+    height: auto;
+    width: 100%; /* Chaque iframe prend toute la largeur */
+    margin-right: 20vw; /* Espace entre les vidéos */
+    display: block; /* Les iframes doivent se comporter comme des blocs */
+    animation: fade 24s infinite linear;
   }
-  33% {
+  @keyframes fade {
+    0% {
+      transform: translateX(16vw);
+    }
+    33% {
+      transform: translateX(16vw);
+    }
+    34% {
+      transform: translateX(-70vw);
+    }
+    65% {
+      transform: translateX(-70vw);
+    }
+    66% {
+      transform: translateX(-157vw);
+    }
+    100% {
+      transform: translateX(-157vw);
+    }
+  }
+  .apercu .arrows {
+    display: flex; /* Aligner les flèches */
+    justify-content: space-between; /* Espacement entre flèches */
+    margin-top: 10px; /* Espace au-dessus des flèches */
+  }
+  .apercu .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0); /* Fond transparent */
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+  }
+  .apercu .left-arrow {
+    left: 10px;
+    display: none; /* Ajustez cela selon vos besoins */
+  }
+  .apercu .right-arrow {
+    right: 10px;
+    display: none; /* Ajustez cela selon vos besoins */
+  }
+}
+@media screen and (max-width: 1050px), (min-width: 351px) {
+  .apercu {
+    padding-top: 3vw;
+    background-color: #221248;
+  }
+  .apercu .accueil-presentation {
+    position: relative;
+    overflow: hidden; /* Pour cacher les vidéos qui débordent */
+  }
+  .apercu .title {
+    color: white;
+    background-color: #3A2380;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    box-shadow: 2px 2.5px 5px 2px rgba(0, 0, 0, 0.8);
+    padding-top: 3px;
+    padding-bottom: 5px;
+  }
+  .apercu .video-container {
+    max-height: 100vw;
+    min-height: 200px;
+    display: flex; /* Permet le défilement horizontal */
+    transition: transform 0.5s ease; /* Animation de transition */
+    width: 260vw; /* S'assurer que le conteneur occupe toute la largeur */
+  }
+  .apercu .presentation {
+    height: auto; /* Hauteur automatique pour respecter les proportions de la vidéo */
+    width: 100%; /* La vidéo prend toute la largeur du conteneur */
+    margin-right: 20vw; /* Ajustez cet espace selon vos besoins */
+  }
+  .apercu .presentation {
+    margin-top: 5px;
+    margin-bottom: 2px;
     transform: translateX(16vw);
+    height: auto;
+    width: 100%; /* Chaque iframe prend toute la largeur */
+    margin-right: 20vw; /* Espace entre les vidéos */
+    display: block; /* Les iframes doivent se comporter comme des blocs */
+    animation: fade 24s infinite linear;
   }
-  34% {
-    transform: translateX(-70vw);
+  @keyframes fade {
+    0% {
+      transform: translateX(16vw);
+    }
+    33% {
+      transform: translateX(16vw);
+    }
+    34% {
+      transform: translateX(-70vw);
+    }
+    65% {
+      transform: translateX(-70vw);
+    }
+    66% {
+      transform: translateX(-157vw);
+    }
+    100% {
+      transform: translateX(-157vw);
+    }
   }
-  65% {
-    transform: translateX(-70vw);
+  .apercu .arrows {
+    display: flex; /* Aligner les flèches */
+    justify-content: space-between; /* Espacement entre flèches */
+    margin-top: 10px; /* Espace au-dessus des flèches */
   }
-  66% {
-    transform: translateX(-157vw);
+  .apercu .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0); /* Fond transparent */
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
   }
-  100% {
-    transform: translateX(-157vw);
+  .apercu .left-arrow {
+    left: 10px;
+    display: none; /* Ajustez cela selon vos besoins */
+  }
+  .apercu .right-arrow {
+    right: 10px;
+    display: none; /* Ajustez cela selon vos besoins */
   }
 }
-.apercu .arrows {
-  display: flex; /* Aligner les flèches */
-  justify-content: space-between; /* Espacement entre flèches */
-  margin-top: 10px; /* Espace au-dessus des flèches */
+@media screen and (max-width: 350px) {
+  .apercu {
+    padding-top: 3vw;
+    background-color: #221248;
+  }
+  .apercu .accueil-presentation {
+    position: relative;
+    overflow: hidden; /* Pour cacher les vidéos qui débordent */
+  }
+  .apercu .title {
+    color: white;
+    background-color: #3A2380;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    box-shadow: 2px 2.5px 5px 2px rgba(0, 0, 0, 0.8);
+    padding-top: 3px;
+    padding-bottom: 5px;
+  }
+  .apercu .video-container {
+    max-height: 90vw;
+    min-height: 50px;
+    display: flex; /* Permet le défilement horizontal */
+    transition: transform 0.5s ease; /* Animation de transition */
+    width: 260vw; /* S'assurer que le conteneur occupe toute la largeur */
+  }
+  .apercu .presentation {
+    height: auto; /* Hauteur automatique pour respecter les proportions de la vidéo */
+    width: 100%; /* La vidéo prend toute la largeur du conteneur */
+    margin-right: 20vw; /* Ajustez cet espace selon vos besoins */
+  }
+  .apercu .presentation {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    transform: translateX(16vw);
+    height: auto;
+    width: 100%; /* Chaque iframe prend toute la largeur */
+    margin-right: 20vw; /* Espace entre les vidéos */
+    display: block; /* Les iframes doivent se comporter comme des blocs */
+    animation: fade 24s infinite linear;
+  }
+  @keyframes fade {
+    0% {
+      transform: translateX(16vw);
+    }
+    33% {
+      transform: translateX(16vw);
+    }
+    34% {
+      transform: translateX(-70vw);
+    }
+    65% {
+      transform: translateX(-70vw);
+    }
+    66% {
+      transform: translateX(-157vw);
+    }
+    100% {
+      transform: translateX(-157vw);
+    }
+  }
+  .apercu .arrows {
+    display: flex; /* Aligner les flèches */
+    justify-content: space-between; /* Espacement entre flèches */
+    margin-top: 10px; /* Espace au-dessus des flèches */
+  }
+  .apercu .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0); /* Fond transparent */
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+  }
+  .apercu .left-arrow {
+    left: 10px;
+    display: none; /* Ajustez cela selon vos besoins */
+  }
+  .apercu .right-arrow {
+    right: 10px;
+    display: none; /* Ajustez cela selon vos besoins */
+  }
 }
-.apercu .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0); /* Fond transparent */
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 10;
-}
-.apercu .left-arrow {
-  left: 10px;
-  display: none; /* Ajustez cela selon vos besoins */
-}
-.apercu .right-arrow {
-  right: 10px;
-  display: none; /* Ajustez cela selon vos besoins */
-}
-
 section.carroussel {
   width: 100%;
   padding-top: 5px;
@@ -1193,13 +1366,17 @@ body {
   top: 0vh;
   width: 25vw;
   margin-right: 10vw;
-  height: auto;
   max-width: 25%;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
   animation: float 6s ease-in-out infinite, opacity-change 10s ease-in-out infinite, color-change 8s ease-in-out infinite, glitch 2s infinite;
   position: relative;
+}
+@media screen and (max-width: 1075px) {
+  .animated-image {
+    display: none;
+  }
 }
 
 /* Ondulation continue sur l'image */
@@ -1612,4 +1789,25 @@ body {
   width: 10%;
   height: auto;
   padding: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  h1.pulsating-text {
+    margin-left: 15vw;
+    max-width: 90vw;
+  }
+  h1.pulsating-text span {
+    font-size: 28px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1.pulsating-text {
+    margin-left: 15.2vw;
+    max-width: 90vw;
+  }
+  h1.pulsating-text span {
+    font-size: 22px;
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=styles.css.map */
