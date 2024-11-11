@@ -135,10 +135,10 @@ header{
     @keyframes fade {
         0% { transform: translateX(16vw) }
         33%{ transform: translateX(16vw);}
-        34% { transform: translateX(-70vw); }
-        65% {transform: translateX(-70vw);}
-        66%{transform: translateX(-157vw);}
-        100%{transform: translateX(-157vw);}
+        34% { transform: translateX(-72vw); }
+        65% {transform: translateX(-72vw);}
+        66%{transform: translateX(-160vw);}
+        100%{transform: translateX(-160vw);}
         
         
     }
@@ -1518,4 +1518,7 @@ footer{
       flex-wrap: wrap;
       
     }}
+}
+.propos:hover{
+  background-color: rgb(198, 191, 191) !important;
 }

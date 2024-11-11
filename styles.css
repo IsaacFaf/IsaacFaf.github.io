@@ -104,16 +104,16 @@ header .navbar-nav a {
       transform: translateX(16vw);
     }
     34% {
-      transform: translateX(-70vw);
+      transform: translateX(-72vw);
     }
     65% {
-      transform: translateX(-70vw);
+      transform: translateX(-72vw);
     }
     66% {
-      transform: translateX(-157vw);
+      transform: translateX(-160vw);
     }
     100% {
-      transform: translateX(-157vw);
+      transform: translateX(-160vw);
     }
   }
   .apercu .arrows {
@@ -1814,4 +1814,7 @@ body {
     font-size: 22px;
     flex-wrap: wrap;
   }
+}
+.propos:hover {
+  background-color: rgb(198, 191, 191) !important;
 }/*# sourceMappingURL=styles.css.map */
