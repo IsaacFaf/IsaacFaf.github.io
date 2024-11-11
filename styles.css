@@ -1429,11 +1429,11 @@ body {
     transform: none;
   }
   10% {
-    filter: contrast(200%) brightness(150%) saturate(200%);
+    filter: contrast(120%) brightness(150%) saturate(200%);
     transform: translate(-2px, -1px);
   }
   20% {
-    filter: blur(2px) hue-rotate(10deg);
+    filter: blur(0px) hue-rotate(10deg);
     transform: translate(2px, 1px);
   }
   30% {
@@ -1445,7 +1445,7 @@ body {
     transform: translate(1px, 0);
   }
   50% {
-    filter: blur(3px) hue-rotate(180deg);
+    filter: blur(1px) hue-rotate(10deg);
     transform: translate(-2px, 2px);
   }
 }
