@@ -191,16 +191,16 @@ header .navbar-nav a {
       transform: translateX(-35vw);
     }
     34% {
-      transform: translateX(-200vw);
+      transform: translateX(-202vw);
     }
     65% {
-      transform: translateX(-200vw);
+      transform: translateX(-202vw);
     }
     66% {
-      transform: translateX(-365vw);
+      transform: translateX(-369vw);
     }
     100% {
-      transform: translateX(-365vw);
+      transform: translateX(-369vw);
     }
   }
   .apercu .arrows {
