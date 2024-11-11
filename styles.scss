@@ -6,6 +6,10 @@ $bgProjet: #221248;
 $titleProjet: #3A2380;
 $footer: #56586C;
 
+
+html{
+  overflow-x: hidden;
+}
 header{
   .navbar-nav .nav-link {
     color: white;
