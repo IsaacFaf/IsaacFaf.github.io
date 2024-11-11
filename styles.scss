@@ -229,12 +229,12 @@ header{
     }
   
   @keyframes fade {
-      0% { transform: translateX(16vw) }
+      0% { transform: translateX(16vw); }
       33%{ transform: translateX(16vw);}
-      34% { transform: translateX(-70vw); }
-      65% {transform: translateX(-70vw);}
-      66%{transform: translateX(-157vw);}
-      100%{transform: translateX(-157vw);}
+      34% { transform: translateX(-71vw); }
+      65% {transform: translateX(-71vw);}
+      66%{transform: translateX(-158vw);}
+      100%{transform: translateX(-158vw);}
       
       
   }
