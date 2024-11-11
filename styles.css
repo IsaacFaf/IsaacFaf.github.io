@@ -165,7 +165,7 @@ header .navbar-nav a {
     min-height: 200px;
     display: flex; /* Permet le défilement horizontal */
     transition: transform 0.5s ease; /* Animation de transition */
-    width: 260vw; /* S'assurer que le conteneur occupe toute la largeur */
+    width: 350vw; /* S'assurer que le conteneur occupe toute la largeur */
   }
   .apercu .presentation {
     height: auto; /* Hauteur automatique pour respecter les proportions de la vidéo */
@@ -178,7 +178,7 @@ header .navbar-nav a {
     transform: translateX(16vw);
     height: auto;
     width: 100%; /* Chaque iframe prend toute la largeur */
-    margin-right: 25vw; /* Espace entre les vidéos */
+    margin-right: 50vw; /* Espace entre les vidéos */
     display: block; /* Les iframes doivent se comporter comme des blocs */
     animation: fade 24s infinite linear;
   }
@@ -190,16 +190,16 @@ header .navbar-nav a {
       transform: translateX(16vw);
     }
     34% {
-      transform: translateX(-68vw);
+      transform: translateX(-100vw);
     }
     65% {
-      transform: translateX(-68vw);
+      transform: translateX(-100vw);
     }
     66% {
-      transform: translateX(-160vw);
+      transform: translateX(-216vw);
     }
     100% {
-      transform: translateX(-160vw);
+      transform: translateX(-216vw);
     }
   }
   .apercu .arrows {
