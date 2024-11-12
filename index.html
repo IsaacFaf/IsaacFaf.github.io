@@ -9,15 +9,24 @@
 </head>
 <body>
 
+    <style>
+        .epilepsyModal{
+            display: none;
+        }
+        @media screen and (max-width:900px) {
+            .epilepsyModal{
+                display: fixed !important;
+            }
+        }
+    </style>
 
-
-    <!--<div id="epilepsyModal" class="modal">
+    <div id="epilepsyModal" class="modal">
         <div class="modal-content">
-          <p>Ce site est en cours de développement et comprend un portfolio. Il est susceptible de subir des modifications ultérieures.</p>
-          <p>En poursuivant votre navigation, vous pourrez découvrir son état actuel. Merci de votre visite !</p>
+          <p>Ce site n'est pas bien supporté en mobile. Pour une meilleure expérience, vous pouvez le consulter sur un ordinateur</p>
+          <p>Merci de votre visite !</p>
           <button onclick="closeModal()">Je comprends</button>
         </div>
-      </div>-->
+      </div>
       
       <script>
         // Affiche la fenêtre modale lors du chargement de la page
