@@ -314,7 +314,7 @@ header{
       
       margin-top: 5px;
       margin-bottom: 2px;
-      transform: translateX(16vw);
+      transform: translateX(18vw);
       height: auto;
       width: 100%; /* Chaque iframe prend toute la largeur */
       margin-right: 20vw; /* Espace entre les vidéos */
@@ -323,10 +323,10 @@ header{
     }
   
   @keyframes fade {
-      0% { transform: translateX(16vw) }
-      33%{ transform: translateX(16vw);}
-      34% { transform: translateX(-70vw); }
-      65% {transform: translateX(-70vw);}
+      0% { transform: translateX(18vw) }
+      33%{ transform: translateX(18vw);}
+      34% { transform: translateX(-68vw); }
+      65% {transform: translateX(-68vw);}
       66%{transform: translateX(-157vw);}
       100%{transform: translateX(-157vw);}
       
@@ -905,7 +905,7 @@ footer{
         .pages:nth-child(#{$i}){
             grid-column: 1/-1;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             a {
                 color: white;
                 text-decoration: none;
